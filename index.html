@@ -1,1011 +1,853 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+      name="description"
+      content="EDIJA ofrece maquinaria agrícola, ganadera y equipos de procesamiento seleccionados por su calidad, resistencia y funcionalidad, con garantía y servicio técnico."
+    />
 
-    <meta
-        name="description"
-        content="Catálogo de maquinaria agrícola EDIJA. Ordeñadoras, motocultores, picadoras, bombas de agua y equipos para fumigación."
-    >
+    <meta name="author" content="EDIJA" />
 
-    <meta
-        name="keywords"
-        content="maquinaria agrícola, ordeñadoras, motocultores, bombas de agua, picadoras, fumigadoras, EDIJA"
-    >
+    <title>EDIJA | Maquinaria agrícola y equipos</title>
 
-    <meta name="author" content="EDIJA">
+    <!-- Estilos generales -->
+    <link rel="stylesheet" href="css/estilos.css" />
 
-    <title>EDIJA | Maquinaria agrícola para tu trabajo</title>
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
 
-    <link rel="stylesheet" href="css/estilos.css">
-</head>
-
-<body>
-
-    <!-- =========================
-         ENCABEZADO
-    ========================== -->
+  <body>
+    <!-- =====================================================
+       ENCABEZADO
+  ====================================================== -->
     <header class="encabezado">
+      <div class="contenedor barra-navegacion">
+        <a
+          href="#inicio"
+          class="nombre-empresa"
+          aria-label="Ir al inicio de EDIJA"
+        >
+          EDIJA
+        </a>
 
-        <div class="contenedor barra-navegacion">
+        <button
+          class="boton-menu"
+          id="boton-menu"
+          type="button"
+          aria-label="Abrir menú de navegación"
+          aria-controls="menu-principal"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
 
-            <a href="index.html" class="nombre-empresa">
-                EDIJA
-            </a>
-
-            <button
-                class="boton-menu"
-                id="boton-menu"
-                type="button"
-                aria-label="Abrir menú de navegación"
-                aria-controls="menu-principal"
-                aria-expanded="false"
-            >
-                ☰
-            </button>
-
-            <nav
-                class="menu-principal"
-                id="menu-principal"
-                aria-label="Navegación principal"
-            >
-                <a href="#inicio">Inicio</a>
-                <a href="#productos">Productos</a>
-                <a href="#informacion">Información</a>
-                <a href="#contacto">Contáctanos</a>
-            </nav>
-
-        </div>
-
+        <nav
+          class="menu-principal"
+          id="menu-principal"
+          aria-label="Navegación principal"
+        >
+          <a href="#inicio">Inicio</a>
+          <a href="#productos">Productos</a>
+          <a href="#nosotros">información</a>
+          <a href="#contacto">Contáctanos</a>
+        </nav>
+      </div>
     </header>
 
-
     <main>
-
-        <!-- =========================
-             PRESENTACIÓN
-        ========================== -->
-        <section class="presentacion" id="inicio">
-
-            <div class="contenedor contenido-presentacion">
-
-                <p class="etiqueta-presentacion">
-                    Equipos para agricultura y ganadería
-                </p>
-
-                <h1>EDIJA</h1>
-
-                <h2>Maquinaria agrícola para tu trabajo</h2>
-
-                <p class="descripcion-presentacion">
-                    Conoce nuestro catálogo de maquinaria agrícola.
-                    Selecciona un producto para revisar sus fotografías,
-                    video de funcionamiento, especificaciones técnicas,
-                    precio, garantía y accesorios.
-                </p>
-
-                <a href="#productos" class="boton boton-principal">
-                    Ver todos los productos
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             CATÁLOGO
-        ========================== -->
-        <section class="seccion-productos" id="productos">
-
-            <div class="contenedor">
-
-                <div class="encabezado-seccion">
-
-                    <p class="etiqueta-seccion">
-                        Catálogo EDIJA
-                    </p>
-
-                    <h2>Todos nuestros productos</h2>
-
-                    <p>
-                        Selecciona una máquina para ver sus fotografías,
-                        video, características y especificaciones completas.
-                    </p>
-
-                </div>
-
-
-                <!-- Filtros -->
-                <div
-                    class="filtros-productos"
-                    aria-label="Filtros del catálogo"
-                >
-
-                    <button
-                        class="boton-filtro activo"
-                        type="button"
-                        data-filtro="todos"
-                    >
-                        Todos
-                    </button>
-
-                    <button
-                        class="boton-filtro"
-                        type="button"
-                        data-filtro="ordenadoras"
-                    >
-                        Ordeñadoras
-                    </button>
-
-                    <button
-                        class="boton-filtro"
-                        type="button"
-                        data-filtro="gasolina"
-                    >
-                        Motor a gasolina
-                    </button>
-
-                    <button
-                        class="boton-filtro"
-                        type="button"
-                        data-filtro="diesel"
-                    >
-                        Motor diésel
-                    </button>
-
-                    <button
-                        class="boton-filtro"
-                        type="button"
-                        data-filtro="picadoras"
-                    >
-                        Picadoras
-                    </button>
-
-                    <button
-                        class="boton-filtro"
-                        type="button"
-                        data-filtro="bombas"
-                    >
-                        Bombas de agua
-                    </button>
-
-                    <button
-                        class="boton-filtro"
-                        type="button"
-                        data-filtro="fumigacion"
-                    >
-                        Fumigación
-                    </button>
-
-                </div>
-
-
-                <!-- Contenedor de productos -->
-                <div class="lista-productos">
-
-
-                    <!-- PRODUCTO 1 -->
-                    <article
-                        class="tarjeta-producto"
-                        data-categoria="ordenadoras"
-                    >
-
-                        <a
-                            href="productos/ordenadora-un-puesto.html"
-                            class="enlace-imagen-producto"
-                            aria-label="Ver detalles de la ordeñadora de un puesto"
-                        >
-                            <img
-                                src="imagenes/ordenadora-un-puesto/frente.jpg"
-                                alt="Vista frontal de la ordeñadora de un puesto"
-                                class="imagen-producto"
-                            >
-                        </a>
-
-                        <div class="contenido-producto">
-
-                            <h3>Ordeñadora de un puesto</h3>
-
-                            <p class="funcion-producto">
-                                Equipo diseñado para ordeñar una vaca
-                                de manera rápida, cómoda y eficiente.
-                            </p>
-
-                            <ul class="datos-principales">
-                                <li>
-                                    <strong>Tipo:</strong>
-                                    Un puesto de ordeño
-                                </li>
-
-                                <li>
-                                    <strong>Garantía:</strong>
-                                    2 años
-                                </li>
-                            </ul>
-
-                            <p class="precio-producto">
-                                $1.250
-                            </p>
-
-                            <a
-                                href="productos/ordenadora-un-puesto.html"
-                                class="boton boton-detalles"
-                            >
-                                Ver detalles
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PRODUCTO 2 -->
-                    <article
-                        class="tarjeta-producto"
-                        data-categoria="ordenadoras"
-                    >
-
-                        <a
-                            href="productos/ordenadora-dos-puestos.html"
-                            class="enlace-imagen-producto"
-                            aria-label="Ver detalles de la ordeñadora de dos puestos"
-                        >
-                            <img
-                                src="imagenes/ordenadora-dos-puestos/frente.jpg"
-                                alt="Vista frontal de la ordeñadora de dos puestos"
-                                class="imagen-producto"
-                                loading="lazy"
-                            >
-                        </a>
-
-                        <div class="contenido-producto">
-
-                            <h3>Ordeñadora de dos puestos</h3>
-
-                            <p class="funcion-producto">
-                                Permite realizar el ordeño de dos vacas
-                                simultáneamente y reducir el tiempo de trabajo.
-                            </p>
-
-                            <ul class="datos-principales">
-                                <li>
-                                    <strong>Tipo:</strong>
-                                    Dos puestos de ordeño
-                                </li>
-
-                                <li>
-                                    <strong>Garantía:</strong>
-                                    2 años
-                                </li>
-                            </ul>
-
-                            <p class="precio-producto">
-                                $1.800
-                            </p>
-
-                            <a
-                                href="productos/ordenadora-dos-puestos.html"
-                                class="boton boton-detalles"
-                            >
-                                Ver detalles
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PRODUCTO 3 -->
-                    <article
-                        class="tarjeta-producto"
-                        data-categoria="gasolina motocultores"
-                    >
-
-                        <a
-                            href="productos/motocultor-oruga-gasolina-9hp.html"
-                            class="enlace-imagen-producto"
-                            aria-label="Ver detalles del motocultor tipo oruga a gasolina"
-                        >
-                            <img
-                                src="imagenes/motocultor-oruga-gasolina-9hp/frente.jpg"
-                                alt="Vista frontal del motocultor tipo oruga de 9 HP a gasolina"
-                                class="imagen-producto"
-                                loading="lazy"
-                            >
-                        </a>
-
-                        <div class="contenido-producto">
-
-                            <h3>Motocultor tipo oruga de 9 HP</h3>
-
-                            <p class="funcion-producto">
-                                Facilita la preparación y el trabajo
-                                de terrenos agrícolas.
-                            </p>
-
-                            <ul class="datos-principales">
-                                <li>
-                                    <strong>Motor:</strong>
-                                    Gasolina
-                                </li>
-
-                                <li>
-                                    <strong>Potencia:</strong>
-                                    9 HP
-                                </li>
-
-                                <li>
-                                    <strong>Garantía:</strong>
-                                    2 años
-                                </li>
-                            </ul>
-
-                            <p class="precio-producto">
-                                $1.000
-                            </p>
-
-                            <a
-                                href="productos/motocultor-oruga-gasolina-9hp.html"
-                                class="boton boton-detalles"
-                            >
-                                Ver detalles
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PRODUCTO 4 -->
-                    <article
-                        class="tarjeta-producto"
-                        data-categoria="diesel motocultores"
-                    >
-
-                        <a
-                            href="productos/motocultor-oruga-diesel-8hp.html"
-                            class="enlace-imagen-producto"
-                            aria-label="Ver detalles del motocultor tipo oruga diésel"
-                        >
-                            <img
-                                src="imagenes/motocultor-oruga-diesel-8hp/frente.jpg"
-                                alt="Vista frontal del motocultor tipo oruga de 8 HP diésel"
-                                class="imagen-producto"
-                                loading="lazy"
-                            >
-                        </a>
-
-                        <div class="contenido-producto">
-
-                            <h3>Motocultor tipo oruga de 8 HP</h3>
-
-                            <p class="funcion-producto">
-                                Máquina resistente para preparar,
-                                remover y trabajar el terreno.
-                            </p>
-
-                            <ul class="datos-principales">
-                                <li>
-                                    <strong>Motor:</strong>
-                                    Diésel
-                                </li>
-
-                                <li>
-                                    <strong>Potencia:</strong>
-                                    8 HP
-                                </li>
-
-                                <li>
-                                    <strong>Garantía:</strong>
-                                    2 años
-                                </li>
-                            </ul>
-
-                            <p class="precio-producto">
-                                $1.100
-                            </p>
-
-                            <a
-                                href="productos/motocultor-oruga-diesel-8hp.html"
-                                class="boton boton-detalles"
-                            >
-                                Ver detalles
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PRODUCTO 5 -->
-                    <article
-                        class="tarjeta-producto"
-                        data-categoria="gasolina picadoras"
-                    >
-
-                        <a
-                            href="productos/picadora-hierba-silo.html"
-                            class="enlace-imagen-producto"
-                            aria-label="Ver detalles de la picadora de hierba para silo"
-                        >
-                            <img
-                                src="imagenes/picadora-hierba-silo/frente.jpg"
-                                alt="Vista frontal de la picadora de hierba para silo"
-                                class="imagen-producto"
-                                loading="lazy"
-                            >
-                        </a>
-
-                        <div class="contenido-producto">
-
-                            <h3>Picadora de hierba para silo</h3>
-
-                            <p class="funcion-producto">
-                                Pica hierba y forraje para preparar
-                                alimento y ensilaje para animales.
-                            </p>
-
-                            <ul class="datos-principales">
-                                <li>
-                                    <strong>Motor:</strong>
-                                    Gasolina
-                                </li>
-
-                                <li>
-                                    <strong>Potencia:</strong>
-                                    7 HP
-                                </li>
-
-                                <li>
-                                    <strong>Garantía:</strong>
-                                    2 años
-                                </li>
-                            </ul>
-
-                            <p class="precio-producto">
-                                $1.000
-                            </p>
-
-                            <a
-                                href="productos/picadora-hierba-silo.html"
-                                class="boton boton-detalles"
-                            >
-                                Ver detalles
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PRODUCTO 6 -->
-                    <article
-                        class="tarjeta-producto"
-                        data-categoria="gasolina picadoras"
-                    >
-
-                        <a
-                            href="productos/picadora-mixta.html"
-                            class="enlace-imagen-producto"
-                            aria-label="Ver detalles de la picadora mixta"
-                        >
-                            <img
-                                src="imagenes/picadora-mixta/frente.jpg"
-                                alt="Vista frontal de la picadora mixta para picar y moler"
-                                class="imagen-producto"
-                                loading="lazy"
-                            >
-                        </a>
-
-                        <div class="contenido-producto">
-
-                            <h3>Picadora mixta para picar y moler</h3>
-
-                            <p class="funcion-producto">
-                                Equipo versátil para picar hierba
-                                y moler diferentes productos agrícolas.
-                            </p>
-
-                            <ul class="datos-principales">
-                                <li>
-                                    <strong>Motor:</strong>
-                                    Gasolina
-                                </li>
-
-                                <li>
-                                    <strong>Potencia:</strong>
-                                    7 HP
-                                </li>
-
-                                <li>
-                                    <strong>Garantía:</strong>
-                                    2 años
-                                </li>
-                            </ul>
-
-                            <p class="precio-producto pendiente">
-                                Precio por confirmar
-                            </p>
-
-                            <a
-                                href="productos/picadora-mixta.html"
-                                class="boton boton-detalles"
-                            >
-                                Ver detalles
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PRODUCTO 7 -->
-                    <article
-                        class="tarjeta-producto"
-                        data-categoria="gasolina bombas"
-                    >
-
-                        <a
-                            href="productos/bomba-agua-2-pulgadas.html"
-                            class="enlace-imagen-producto"
-                            aria-label="Ver detalles de la bomba de agua de 2 pulgadas"
-                        >
-                            <img
-                                src="imagenes/bomba-agua-2-pulgadas/frente.jpg"
-                                alt="Vista frontal de la bomba de agua de 2 pulgadas"
-                                class="imagen-producto"
-                                loading="lazy"
-                            >
-                        </a>
-
-                        <div class="contenido-producto">
-
-                            <h3>Bomba de agua de 2 pulgadas</h3>
-
-                            <p class="funcion-producto">
-                                Permite trasladar agua para riego,
-                                abastecimiento y trabajos agrícolas.
-                            </p>
-
-                            <ul class="datos-principales">
-                                <li>
-                                    <strong>Motor:</strong>
-                                    Gasolina
-                                </li>
-
-                                <li>
-                                    <strong>Potencia:</strong>
-                                    7 HP
-                                </li>
-
-                                <li>
-                                    <strong>Conexión:</strong>
-                                    2 pulgadas
-                                </li>
-
-                                <li>
-                                    <strong>Garantía:</strong>
-                                    2 años
-                                </li>
-                            </ul>
-
-                            <p class="precio-producto pendiente">
-                                Precio por confirmar
-                            </p>
-
-                            <a
-                                href="productos/bomba-agua-2-pulgadas.html"
-                                class="boton boton-detalles"
-                            >
-                                Ver detalles
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PRODUCTO 8 -->
-                    <article
-                        class="tarjeta-producto"
-                        data-categoria="gasolina bombas"
-                    >
-
-                        <a
-                            href="productos/bomba-alta-presion.html"
-                            class="enlace-imagen-producto"
-                            aria-label="Ver detalles de la bomba de agua de alta presión"
-                        >
-                            <img
-                                src="imagenes/bomba-alta-presion/frente.jpg"
-                                alt="Vista frontal de la bomba de agua de alta presión"
-                                class="imagen-producto"
-                                loading="lazy"
-                            >
-                        </a>
-
-                        <div class="contenido-producto">
-
-                            <h3>Bomba de agua de alta presión</h3>
-
-                            <p class="funcion-producto">
-                                Equipo para impulsar agua a mayor presión
-                                en diferentes trabajos agrícolas.
-                            </p>
-
-                            <ul class="datos-principales">
-                                <li>
-                                    <strong>Motor:</strong>
-                                    Gasolina
-                                </li>
-
-                                <li>
-                                    <strong>Potencia:</strong>
-                                    De 7 a 16 HP
-                                </li>
-
-                                <li>
-                                    <strong>Conexiones:</strong>
-                                    Diferentes medidas disponibles
-                                </li>
-
-                                <li>
-                                    <strong>Garantía:</strong>
-                                    2 años
-                                </li>
-                            </ul>
-
-                            <p class="precio-producto pendiente">
-                                Precio según modelo
-                            </p>
-
-                            <a
-                                href="productos/bomba-alta-presion.html"
-                                class="boton boton-detalles"
-                            >
-                                Ver detalles
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PRODUCTO 9 -->
-                    <article
-                        class="tarjeta-producto"
-                        data-categoria="bombas"
-                    >
-
-                        <a
-                            href="productos/bomba-agua-presion.html"
-                            class="enlace-imagen-producto"
-                            aria-label="Ver detalles de la bomba de agua de presión"
-                        >
-                            <img
-                                src="imagenes/bomba-agua-presion/frente.jpg"
-                                alt="Vista frontal de la bomba de agua de presión"
-                                class="imagen-producto"
-                                loading="lazy"
-                            >
-                        </a>
-
-                        <div class="contenido-producto">
-
-                            <h3>Bomba de agua de presión</h3>
-
-                            <p class="funcion-producto">
-                                Bomba diseñada para transportar agua
-                                con presión constante.
-                            </p>
-
-                            <ul class="datos-principales">
-                                <li>
-                                    <strong>Motor:</strong>
-                                    Información por confirmar
-                                </li>
-
-                                <li>
-                                    <strong>Potencia:</strong>
-                                    Información por confirmar
-                                </li>
-
-                                <li>
-                                    <strong>Garantía:</strong>
-                                    2 años
-                                </li>
-                            </ul>
-
-                            <p class="precio-producto">
-                                $1.000
-                            </p>
-
-                            <a
-                                href="productos/bomba-agua-presion.html"
-                                class="boton boton-detalles"
-                            >
-                                Ver detalles
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PRODUCTO 10 -->
-                    <article
-                        class="tarjeta-producto"
-                        data-categoria="gasolina fumigacion"
-                    >
-
-                        <a
-                            href="productos/fumigadora-estacionaria.html"
-                            class="enlace-imagen-producto"
-                            aria-label="Ver detalles de la fumigadora estacionaria"
-                        >
-                            <img
-                                src="imagenes/fumigadora-estacionaria/frente.jpg"
-                                alt="Vista frontal de la fumigadora estacionaria"
-                                class="imagen-producto"
-                                loading="lazy"
-                            >
-                        </a>
-
-                        <div class="contenido-producto">
-
-                            <h3>Fumigadora estacionaria de 7 HP</h3>
-
-                            <p class="funcion-producto">
-                                Equipo para fumigar cultivos,
-                                terrenos y áreas agrícolas.
-                            </p>
-
-                            <ul class="datos-principales">
-                                <li>
-                                    <strong>Motor:</strong>
-                                    Gasolina
-                                </li>
-
-                                <li>
-                                    <strong>Potencia:</strong>
-                                    7 HP
-                                </li>
-
-                                <li>
-                                    <strong>Incluye:</strong>
-                                    Manguera de succión, retorno y lanza
-                                </li>
-
-                                <li>
-                                    <strong>Garantía:</strong>
-                                    2 años
-                                </li>
-                            </ul>
-
-                            <p class="precio-producto pendiente">
-                                Precio por confirmar
-                            </p>
-
-                            <a
-                                href="productos/fumigadora-estacionaria.html"
-                                class="boton boton-detalles"
-                            >
-                                Ver detalles
-                            </a>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             INFORMACIÓN DEL NEGOCIO
-        ========================== -->
-        <section class="seccion-informacion" id="informacion">
-
-            <div class="contenedor">
-
-                <div class="encabezado-seccion">
-
-                    <p class="etiqueta-seccion">
-                        Compra con confianza
-                    </p>
-
-                    <h2>Información importante</h2>
-
-                </div>
-
-                <div class="lista-beneficios">
-
-                    <article class="beneficio">
-
-                        <span class="icono-beneficio" aria-hidden="true">
-                            ✓
-                        </span>
-
-                        <h3>Garantía de dos años</h3>
-
-                        <p>
-                            Todos nuestros productos cuentan con
-                            garantía de dos años.
-                        </p>
-
-                    </article>
-
-                    <article class="beneficio">
-
-                        <span class="icono-beneficio" aria-hidden="true">
-                            ⚙
-                        </span>
-
-                        <h3>Servicio y mantenimiento</h3>
-
-                        <p>
-                            Ofrecemos asistencia, servicio técnico
-                            y mantenimiento para nuestros equipos.
-                        </p>
-
-                    </article>
-
-                    <article class="beneficio">
-
-                        <span class="icono-beneficio" aria-hidden="true">
-                            $
-                        </span>
-
-                        <h3>Formas de pago</h3>
-
-                        <p>
-                            Puedes realizar el pago en efectivo
-                            o mediante transferencia bancaria.
-                        </p>
-
-                    </article>
-
-                    <article class="beneficio">
-
-                        <span class="icono-beneficio" aria-hidden="true">
-                            🚚
-                        </span>
-
-                        <h3>Entrega disponible</h3>
-
-                        <p>
-                            Coordinamos la entrega de los productos
-                            dentro de Ambato.
-                        </p>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             CONTACTO Y REDES
-        ========================== -->
-        <section class="seccion-contacto" id="contacto">
-
-            <div class="contenedor">
-
-                <div class="encabezado-seccion">
-
-                    <p class="etiqueta-seccion">
-                        EDIJA
-                    </p>
-
-                    <h2>Contáctanos</h2>
-
-                    <p>
-                        Revisa los detalles del producto que te interesa
-                        y comunícate con nosotros para consultar su
-                        disponibilidad y coordinar la compra.
-                    </p>
-
-                </div>
-
-                <div class="enlaces-contacto">
-
-                    <a
-                        href="https://wa.me/593984717112"
-                        class="enlace-red whatsapp"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <span>WhatsApp</span>
-                        <strong>098 471 7112</strong>
-                    </a>
-
-                    <a
-                        href="LINK_DE_FACEBOOK"
-                        class="enlace-red facebook"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <span>Facebook</span>
-                        <strong>Visitar página</strong>
-                    </a>
-
-                    <a
-                        href="LINK_DE_INSTAGRAM"
-                        class="enlace-red instagram"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <span>Instagram</span>
-                        <strong>Ver publicaciones</strong>
-                    </a>
-
-                    <a
-                        href="LINK_DE_TIKTOK"
-                        class="enlace-red tiktok"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <span>TikTok</span>
-                        <strong>Ver videos</strong>
-                    </a>
-
-                </div>
-
-                <div class="ubicacion-negocio">
-
-                    <h3>Dirección</h3>
-
-                    <p>
-                        Ambato, Tungurahua
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================
-         PIE DE PÁGINA
-    ========================== -->
-    <footer class="pie-pagina">
-
-        <div class="contenedor contenido-pie">
-
-            <div>
-                <strong>EDIJA</strong>
-
-                <p>
-                    Maquinaria agrícola para tu trabajo.
-                </p>
-            </div>
+      <!-- =====================================================
+         PRESENTACIÓN PRINCIPAL
+    ====================================================== -->
+      <section class="presentacion" id="inicio">
+        <div class="contenedor contenido-presentacion">
+          <p class="etiqueta-presentacion">Maquinaria agrícola y ganadera</p>
+
+          <h1>EDIJA</h1>
+
+          <h2>Equipos confiables para hacer más eficiente tu trabajo</h2>
+
+          <p class="descripcion-presentacion">
+            Seleccionamos maquinaria fabricada con materiales resistentes y
+            trabajamos con proveedores e importadores especializados, incluyendo
+            equipos y componentes de procedencia europea. Nuestro objetivo es
+            ofrecer soluciones prácticas para agricultura, ganadería y
+            procesamiento, acompañadas de garantía y servicio técnico.
+          </p>
+
+          <a href="#productos" class="boton boton-principal"> Ver catálogo </a>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         CATÁLOGO
+    ====================================================== -->
+      <section class="seccion-productos" id="productos">
+        <div class="contenedor">
+          <div class="encabezado-seccion">
+            <p class="etiqueta-seccion">Catálogo EDIJA</p>
+
+            <h2>Nuestra maquinaria</h2>
 
             <p>
-                © <span id="anio"></span> EDIJA.
-                Todos los derechos reservados.
+              Revisa nuestros equipos disponibles. Las fotografías del catálogo
+              cambian automáticamente cuando un producto tiene varias imágenes.
+              Selecciona una máquina para conocer sus características completas.
             </p>
+          </div>
 
+          <div class="grid-productos">
+            <!-- PRODUCTO 1 -->
+            <article
+              class="tarjeta-producto"
+              data-producto="productos/bomba-agua-2-pulgadas.html"
+            >
+              <a
+                href="productos/bomba-agua-2-pulgadas.html"
+                aria-label="Ver más detalles de Bomba de agua de 2 pulgadas"
+              >
+                <img
+                  src="imagenes/bomba-agua-2-pulgadas/f1.png"
+                  alt="Bomba de agua de 2 pulgadas"
+                  loading="lazy"
+                />
+
+                <div class="contenido-tarjeta">
+                  <h3>Bomba de agua de 2 pulgadas</h3>
+
+                  <p class="precio-index">Cargando precio...</p>
+
+                  <span class="ver-detalles">
+                    Ver más detalles
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- PRODUCTO 2 -->
+            <article
+              class="tarjeta-producto"
+              data-producto="productos/bomba-vacio.html"
+            >
+              <a
+                href="productos/bomba-vacio.html"
+                aria-label="Ver más detalles de Bomba de vacío"
+              >
+                <img
+                  src="imagenes/bomba-vacio/f1.png"
+                  alt="Bomba de vacío"
+                  loading="lazy"
+                />
+
+                <div class="contenido-tarjeta">
+                  <h3>Bomba de vacío</h3>
+
+                  <p class="precio-index">Cargando precio...</p>
+
+                  <span class="ver-detalles">
+                    Ver más detalles
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- PRODUCTO 3 -->
+            <article
+              class="tarjeta-producto"
+              data-producto="productos/briqueta-carbon.html"
+            >
+              <a
+                href="productos/briqueta-carbon.html"
+                aria-label="Ver más detalles de Briquetadora de carbón"
+              >
+                <img
+                  src="imagenes/briqueta-carbon/f1.png"
+                  alt="Briquetadora de carbón"
+                  loading="lazy"
+                />
+
+                <div class="contenido-tarjeta">
+                  <h3>Briquetadora de carbón</h3>
+
+                  <p class="precio-index">Cargando precio...</p>
+
+                  <span class="ver-detalles">
+                    Ver más detalles
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- PRODUCTO 4 -->
+            <article
+              class="tarjeta-producto"
+              data-producto="productos/clasificadora-granos.html"
+            >
+              <a
+                href="productos/clasificadora-granos.html"
+                aria-label="Ver más detalles de Clasificadora de granos mediana"
+              >
+                <img
+                  src="imagenes/clasificadora-granos/f1.png"
+                  alt="Clasificadora de granos mediana"
+                  loading="lazy"
+                />
+
+                <div class="contenido-tarjeta">
+                  <h3>Clasificadora de granos mediana</h3>
+
+                  <p class="precio-index">Cargando precio...</p>
+
+                  <span class="ver-detalles">
+                    Ver más detalles
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- PRODUCTO 5 -->
+            <article
+              class="tarjeta-producto"
+              data-producto="productos/elevador.html"
+            >
+              <a
+                href="productos/elevador.html"
+                aria-label="Ver más detalles de Elevador de material"
+              >
+                <img
+                  src="imagenes/elevador/f1.png"
+                  alt="Elevador de material"
+                  loading="lazy"
+                />
+
+                <div class="contenido-tarjeta">
+                  <h3>Elevador de material</h3>
+
+                  <p class="precio-index">Cargando precio...</p>
+
+                  <span class="ver-detalles">
+                    Ver más detalles
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- PRODUCTO 6 -->
+            <article
+              class="tarjeta-producto"
+              data-producto="productos/mezclador-espiral.html"
+            >
+              <a
+                href="productos/mezclador-espiral.html"
+                aria-label="Ver más detalles de Mezcladora espiral"
+              >
+                <img
+                  src="imagenes/mezclador-espiral/f1.png"
+                  alt="Mezcladora espiral"
+                  loading="lazy"
+                />
+
+                <div class="contenido-tarjeta">
+                  <h3>Mezcladora espiral</h3>
+
+                  <p class="precio-index">Cargando precio...</p>
+
+                  <span class="ver-detalles">
+                    Ver más detalles
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- PRODUCTO 7 -->
+            <article
+              class="tarjeta-producto"
+              data-producto="productos/mezcladora-balanceado-extrusora.html"
+            >
+              <a
+                href="productos/mezcladora-balanceado-extrusora.html"
+                aria-label="Ver más detalles de Extrusora de balanceado"
+              >
+                <img
+                  src="imagenes/mezcladora-balanceado-extrusora/f1.png"
+                  alt="Extrusora de balanceado"
+                  loading="lazy"
+                />
+
+                <div class="contenido-tarjeta">
+                  <h3>Extrusora de balanceado</h3>
+
+                  <p class="precio-index">Cargando precio...</p>
+
+                  <span class="ver-detalles">
+                    Ver más detalles
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- PRODUCTO 8 -->
+            <article
+              class="tarjeta-producto"
+              data-producto="productos/mezcladora-balanceados.html"
+            >
+              <a
+                href="productos/mezcladora-balanceados.html"
+                aria-label="Ver más detalles de Mezcladora de balanceados"
+              >
+                <img
+                  src="imagenes/mezcladora-balanceados/f1.png"
+                  alt="Mezcladora de balanceados"
+                  loading="lazy"
+                />
+
+                <div class="contenido-tarjeta">
+                  <h3>Mezcladora de balanceados</h3>
+
+                  <p class="precio-index">Cargando precio...</p>
+
+                  <span class="ver-detalles">
+                    Ver más detalles
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- PRODUCTO 9 -->
+            <article
+              class="tarjeta-producto"
+              data-producto="productos/molino.html"
+            >
+              <a
+                href="productos/molino.html"
+                aria-label="Ver más detalles de Molino doméstico"
+              >
+                <img
+                  src="imagenes/molino/f1.png"
+                  alt="Molino doméstico"
+                  loading="lazy"
+                />
+
+                <div class="contenido-tarjeta">
+                  <h3>Molino doméstico</h3>
+
+                  <p class="precio-index">Cargando precio...</p>
+
+                  <span class="ver-detalles">
+                    Ver más detalles
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- PRODUCTO 10 -->
+            <article
+              class="tarjeta-producto"
+              data-producto="productos/montacarga-portatil.html"
+            >
+              <a
+                href="productos/montacarga-portatil.html"
+                aria-label="Ver más detalles de Montacarga portátil eléctrica"
+              >
+                <img
+                  src="imagenes/montacarga-portatil/f1.png"
+                  alt="Montacarga portátil eléctrica"
+                  loading="lazy"
+                />
+
+                <div class="contenido-tarjeta">
+                  <h3>Montacarga portátil eléctrica</h3>
+
+                  <p class="precio-index">Cargando precio...</p>
+
+                  <span class="ver-detalles">
+                    Ver más detalles
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- PRODUCTO 11 -->
+            <article
+              class="tarjeta-producto"
+              data-producto="productos/motocultor-oruga-gasolina-9hp.html"
+            >
+              <a
+                href="productos/motocultor-oruga-gasolina-9hp.html"
+                aria-label="Ver más detalles de Motocultor tipo oruga"
+              >
+                <img
+                  src="imagenes/motocultor-oruga-gasolina-9hp/f1.png"
+                  alt="Motocultor tipo oruga"
+                  loading="lazy"
+                />
+
+                <div class="contenido-tarjeta">
+                  <h3>Motocultor tipo oruga</h3>
+
+                  <p class="precio-index">Cargando precio...</p>
+
+                  <span class="ver-detalles">
+                    Ver más detalles
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- PRODUCTO 12 -->
+            <article
+              class="tarjeta-producto"
+              data-producto="productos/motoguadana.html"
+            >
+              <a
+                href="productos/motoguadana.html"
+                aria-label="Ver más detalles de Motoguadaña a gasolina"
+              >
+                <img
+                  src="imagenes/motoguadana/f1.png"
+                  alt="Motoguadaña a gasolina"
+                  loading="lazy"
+                />
+
+                <div class="contenido-tarjeta">
+                  <h3>Motoguadaña a gasolina</h3>
+
+                  <p class="precio-index">Cargando precio...</p>
+
+                  <span class="ver-detalles">
+                    Ver más detalles
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- PRODUCTO 13 -->
+            <article
+              class="tarjeta-producto"
+              data-producto="productos/ordenadora-1-puesto.html"
+            >
+              <a
+                href="productos/ordenadora-1-puesto.html"
+                aria-label="Ver más detalles de Ordeñadora de 1 puesto"
+              >
+                <img
+                  src="imagenes/ordenadora-1-puesto/f1.png"
+                  alt="Ordeñadora de 1 puesto"
+                  loading="lazy"
+                />
+
+                <div class="contenido-tarjeta">
+                  <h3>Ordeñadora de 1 puesto</h3>
+
+                  <p class="precio-index">Cargando precio...</p>
+
+                  <span class="ver-detalles">
+                    Ver más detalles
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- PRODUCTO 14 -->
+            <article
+              class="tarjeta-producto"
+              data-producto="productos/ordenadora-2-puesto.html"
+            >
+              <a
+                href="productos/ordenadora-2-puesto.html"
+                aria-label="Ver más detalles de Ordeñadora de 2 puestos Kurtsan"
+              >
+                <img
+                  src="imagenes/ordenadora-2-puesto/f1.png"
+                  alt="Ordeñadora de 2 puestos Kurtsan"
+                  loading="lazy"
+                />
+
+                <div class="contenido-tarjeta">
+                  <h3>Ordeñadora de 2 puestos Kurtsan</h3>
+
+                  <p class="precio-index">Cargando precio...</p>
+
+                  <span class="ver-detalles">
+                    Ver más detalles
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- PRODUCTO 15 -->
+            <article
+              class="tarjeta-producto"
+              data-producto="productos/pelletilizadora.html"
+            >
+              <a
+                href="productos/pelletilizadora.html"
+                aria-label="Ver más detalles de Pelletilizadora"
+              >
+                <img
+                  src="imagenes/pelletilizadora/f1.png"
+                  alt="Pelletilizadora"
+                  loading="lazy"
+                />
+
+                <div class="contenido-tarjeta">
+                  <h3>Pelletilizadora</h3>
+
+                  <p class="precio-index">Cargando precio...</p>
+
+                  <span class="ver-detalles">
+                    Ver más detalles
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- PRODUCTO 16 -->
+            <article
+              class="tarjeta-producto"
+              data-producto="productos/picadora-hierba.html"
+            >
+              <a
+                href="productos/picadora-hierba.html"
+                aria-label="Ver más detalles de Picadora de hierba"
+              >
+                <img
+                  src="imagenes/picadora-hierba/f1.png"
+                  alt="Picadora de hierba"
+                  loading="lazy"
+                />
+
+                <div class="contenido-tarjeta">
+                  <h3>Picadora de hierba</h3>
+
+                  <p class="precio-index">Cargando precio...</p>
+
+                  <span class="ver-detalles">
+                    Ver más detalles
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- PRODUCTO 17 -->
+            <article
+              class="tarjeta-producto"
+              data-producto="productos/picadora-mixta.html"
+            >
+              <a
+                href="productos/picadora-mixta.html"
+                aria-label="Ver más detalles de Picadora mixta"
+              >
+                <img
+                  src="imagenes/picadora-mixta/f1.png"
+                  alt="Picadora mixta"
+                  loading="lazy"
+                />
+
+                <div class="contenido-tarjeta">
+                  <h3>Picadora mixta</h3>
+
+                  <p class="precio-index">Cargando precio...</p>
+
+                  <span class="ver-detalles">
+                    Ver más detalles
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- PRODUCTO 18 -->
+            <article
+              class="tarjeta-producto"
+              data-producto="productos/picadora-3-en-1.html"
+            >
+              <a
+                href="productos/picadora-3-en-1.html"
+                aria-label="Ver más detalles de Picadora 3 en 1"
+              >
+                <img
+                  src="imagenes/picadora-3-en-1/f1.png"
+                  alt="Picadora 3 en 1"
+                  loading="lazy"
+                />
+
+                <div class="contenido-tarjeta">
+                  <h3>Picadora 3 en 1</h3>
+
+                  <p class="precio-index">Cargando precio...</p>
+
+                  <span class="ver-detalles">
+                    Ver más detalles
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- PRODUCTO 19 -->
+            <article
+              class="tarjeta-producto"
+              data-producto="productos/picadora-pasto.html"
+            >
+              <a
+                href="productos/picadora-pasto.html"
+                aria-label="Ver más detalles de Picadora de pasto"
+              >
+                <img
+                  src="imagenes/picadora-pasto/f1.png"
+                  alt="Picadora de pasto"
+                  loading="lazy"
+                />
+
+                <div class="contenido-tarjeta">
+                  <h3>Picadora de pasto</h3>
+
+                  <p class="precio-index">Cargando precio...</p>
+
+                  <span class="ver-detalles">
+                    Ver más detalles
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- PRODUCTO 20 -->
+            <article
+              class="tarjeta-producto"
+              data-producto="productos/piladora.html"
+            >
+              <a
+                href="productos/piladora.html"
+                aria-label="Ver más detalles de Piladora doméstica 4 en 1"
+              >
+                <img
+                  src="imagenes/piladora/f1.png"
+                  alt="Piladora doméstica 4 en 1"
+                  loading="lazy"
+                />
+
+                <div class="contenido-tarjeta">
+                  <h3>Piladora doméstica 4 en 1</h3>
+
+                  <p class="precio-index">Cargando precio...</p>
+
+                  <span class="ver-detalles">
+                    Ver más detalles
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- PRODUCTO 21 -->
+            <article
+              class="tarjeta-producto"
+              data-producto="productos/varios.html"
+            >
+              <a
+                href="productos/varios.html"
+                aria-label="Ver más detalles de Otros productos y maquinaria"
+              >
+                <img
+                  src="imagenes/varios/f1.png"
+                  alt="Otros productos y maquinaria"
+                  loading="lazy"
+                />
+
+                <div class="contenido-tarjeta">
+                  <h3>Otros productos y maquinaria</h3>
+
+                  <p class="precio-index">Cargando precio...</p>
+
+                  <span class="ver-detalles">
+                    Ver más detalles
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         POR QUÉ ELEGIR EDIJA
+    ====================================================== -->
+      <section class="seccion-informacion" id="nosotros">
+        <div class="contenedor">
+          <div class="encabezado-seccion">
+            <p class="etiqueta-seccion">Respaldo EDIJA</p>
+
+            <h2>Equipos pensados para trabajar y durar</h2>
+
+            <p>
+              Buscamos que cada cliente encuentre una máquina adecuada para su
+              necesidad, con acompañamiento antes y después de la compra.
+            </p>
+          </div>
+
+          <div class="lista-beneficios">
+            <article class="beneficio">
+              <span class="icono-beneficio" aria-hidden="true">
+                <i class="bi bi-shield-check"></i>
+              </span>
+
+              <h3>Materiales resistentes</h3>
+
+              <p>
+                Seleccionamos equipos construidos para soportar las exigencias
+                del trabajo agrícola, ganadero y de procesamiento.
+              </p>
+            </article>
+
+            <article class="beneficio">
+              <span class="icono-beneficio" aria-hidden="true">
+                <i class="bi bi-globe-europe-africa"></i>
+              </span>
+
+              <h3>Proveedores especializados</h3>
+
+              <p>
+                Trabajamos con proveedores e importadores de maquinaria y
+                componentes, incluyendo alternativas de procedencia europea.
+              </p>
+            </article>
+
+            <article class="beneficio">
+              <span class="icono-beneficio" aria-hidden="true">
+                <i class="bi bi-tools"></i>
+              </span>
+
+              <h3>Servicio técnico</h3>
+
+              <p>
+                Brindamos soporte técnico para ayudar a mantener los equipos en
+                buenas condiciones de funcionamiento.
+              </p>
+            </article>
+
+            <article class="beneficio">
+              <span class="icono-beneficio" aria-hidden="true">
+                <i class="bi bi-patch-check"></i>
+              </span>
+
+              <h3>Garantía</h3>
+
+              <p>
+                Nuestra maquinaria cuenta con respaldo y garantía de acuerdo con
+                las condiciones correspondientes a cada producto.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         CONTACTO
+    ====================================================== -->
+      <section class="seccion-contacto" id="contacto">
+        <div class="contenedor">
+          <div class="encabezado-seccion">
+            <p class="etiqueta-seccion">Hablemos</p>
+
+            <h2>¿Te interesa alguno de nuestros equipos?</h2>
+
+            <p>
+              Escríbenos para consultar disponibilidad, negociar el precio y
+              recibir información sobre el producto que necesitas.
+            </p>
+          </div>
+
+          <div class="redes-sociales">
+            <!-- WhatsApp -->
+            <a
+              href="https://wa.me/593984717112?text=Hola,%20estoy%20interesado%20en%20conocer%20los%20productos%20de%20EDIJA."
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Contactar a EDIJA por WhatsApp"
+            >
+              <i class="bi bi-whatsapp" aria-hidden="true"></i>
+              WhatsApp
+            </a>
+
+            <!-- Facebook -->
+            <a
+              href="#"
+              class="red-social-pendiente"
+              aria-label="Facebook de EDIJA próximamente"
+              onclick="return false;"
+            >
+              <i class="bi bi-facebook" aria-hidden="true"></i>
+              Facebook
+            </a>
+
+            <!-- Instagram -->
+            <a
+              href="#"
+              class="red-social-pendiente"
+              aria-label="Instagram de EDIJA próximamente"
+              onclick="return false;"
+            >
+              <i class="bi bi-instagram" aria-hidden="true"></i>
+              Instagram
+            </a>
+
+            <!-- TikTok -->
+            <a
+              href="#"
+              class="red-social-pendiente"
+              aria-label="TikTok de EDIJA próximamente"
+              onclick="return false;"
+            >
+              <i class="bi bi-tiktok" aria-hidden="true"></i>
+              TikTok
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =====================================================
+       PIE DE PÁGINA
+  ====================================================== -->
+    <footer class="pie-pagina">
+      <div class="contenedor contenido-pie">
+        <div>
+          <strong> EDIJA </strong>
+
+          <p>Maquinaria agrícola, ganadera y equipos de procesamiento.</p>
         </div>
 
+        <p>© <span id="anio"></span> EDIJA. Todos los derechos reservados.</p>
+      </div>
     </footer>
 
-
+    <!-- JavaScript -->
     <script src="js/script.js"></script>
-
-</body>
+  </body>
 </html>

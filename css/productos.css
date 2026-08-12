@@ -1,0 +1,857 @@
+/* ==================================================
+   EDIJA - PÁGINAS DE DETALLE DE PRODUCTOS
+   Archivo: productos.css
+================================================== */
+
+
+/* ==================================================
+   1. RUTA DE NAVEGACIÓN
+================================================== */
+
+.ruta-producto {
+    padding: 18px 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--borde);
+}
+
+.ruta-producto nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+}
+
+.ruta-producto a {
+    color: var(--azul-principal);
+    font-weight: 700;
+    transition: color var(--transicion);
+}
+
+.ruta-producto a:hover {
+    color: var(--rojo-principal);
+}
+
+.ruta-producto strong {
+    color: var(--texto-principal);
+}
+
+
+/* ==================================================
+   2. INFORMACIÓN PRINCIPAL DEL PRODUCTO
+================================================== */
+
+.detalle-producto {
+    padding: 55px 0 75px;
+    background-color: var(--fondo-general);
+}
+
+.detalle-producto-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+    align-items: start;
+    gap: 48px;
+}
+
+
+/* Imagen principal */
+
+.imagen-principal-producto {
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio-grande);
+    box-shadow: var(--sombra-tarjeta);
+}
+
+.imagen-principal-producto img {
+    width: 100%;
+    height: 540px;
+
+    /* Muestra la máquina completa sin cortarla */
+    object-fit: contain;
+    object-position: center;
+    background-color: #ffffff;
+    padding: 12px;
+    transition: transform 0.45s ease;
+}
+
+.imagen-principal-producto:hover img {
+    transform: scale(1.025);
+}
+
+.etiqueta-garantia {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 9px 15px;
+    background-color: var(--rojo-principal);
+    color: #ffffff;
+    border-radius: 30px;
+    font-size: 0.86rem;
+    font-weight: 900;
+    box-shadow: 0 7px 18px rgba(214, 40, 40, 0.28);
+}
+
+
+/* Información textual */
+
+.resumen-producto {
+    padding: 8px 0;
+}
+
+.etiqueta-producto {
+    display: inline-block;
+    margin-bottom: 13px;
+    padding: 7px 13px;
+    background-color: var(--azul-claro);
+    color: var(--azul-principal);
+    border-radius: 30px;
+    font-size: 0.79rem;
+    font-weight: 900;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+}
+
+.resumen-producto h1 {
+    margin-bottom: 17px;
+    color: var(--azul-oscuro);
+    font-size: clamp(2.2rem, 5vw, 3.7rem);
+    line-height: 1.08;
+}
+
+.descripcion-principal-producto {
+    margin-bottom: 23px;
+    color: var(--texto-secundario);
+    font-size: 1.06rem;
+}
+
+
+/* Precio */
+
+.precio-detalle {
+    display: flex;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 11px;
+    color: var(--rojo-principal);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 900;
+    line-height: 1;
+}
+
+.precio-detalle span {
+    padding: 7px 12px;
+    background-color: var(--rojo-claro);
+    color: var(--rojo-oscuro);
+    border: 1px solid #f4c3c3;
+    border-radius: 30px;
+    font-size: 0.84rem;
+    font-weight: 800;
+}
+
+
+/* Datos principales */
+
+.datos-destacados {
+    margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.dato-destacado {
+    padding: 17px;
+    background-color: #ffffff;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio-mediano);
+    box-shadow: var(--sombra-suave);
+}
+
+.dato-destacado span {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--texto-secundario);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.dato-destacado strong {
+    display: block;
+    color: var(--azul-oscuro);
+    font-size: 1rem;
+}
+
+
+/* Beneficios con pocos símbolos visuales */
+
+.resumen-beneficios {
+    margin-bottom: 27px;
+    display: grid;
+    gap: 9px;
+    list-style: none;
+}
+
+.resumen-beneficios li {
+    position: relative;
+    padding-left: 30px;
+    color: var(--texto-principal);
+}
+
+.resumen-beneficios li::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--azul-principal);
+    font-weight: 900;
+    content: "✓";
+}
+
+.resumen-beneficios li:nth-child(1)::before {
+    content: "🚚";
+}
+
+.resumen-beneficios li:nth-child(2)::before {
+    content: "🛡️";
+}
+
+.resumen-beneficios li:nth-child(3)::before {
+    content: "⚙️";
+}
+
+
+/* ==================================================
+   3. BOTÓN DE WHATSAPP
+================================================== */
+
+.boton-whatsapp-producto {
+    display: inline-flex;
+    min-height: 55px;
+    padding: 14px 25px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--verde-whatsapp);
+    color: #073b1b;
+    border: 2px solid transparent;
+    border-radius: 11px;
+    font-size: 1rem;
+    font-weight: 900;
+    text-align: center;
+    box-shadow: 0 10px 24px rgba(37, 211, 102, 0.25);
+    transition:
+        background-color var(--transicion),
+        color var(--transicion),
+        transform var(--transicion),
+        box-shadow var(--transicion);
+}
+
+.boton-whatsapp-producto:hover {
+    background-color: var(--verde-whatsapp-oscuro);
+    color: #ffffff;
+    box-shadow: 0 14px 28px rgba(18, 140, 74, 0.32);
+    transform: translateY(-3px);
+}
+
+.boton-whatsapp-producto i {
+    font-size: 1.35rem;
+}
+
+
+/* ==================================================
+   4. GALERÍA DE FOTOGRAFÍAS
+================================================== */
+
+.seccion-galeria {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.galeria-producto {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.elemento-galeria {
+    overflow: hidden;
+    background-color: var(--fondo-general);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio-mediano);
+    box-shadow: var(--sombra-suave);
+    transition:
+        box-shadow var(--transicion),
+        transform var(--transicion);
+}
+
+.elemento-galeria:hover {
+    box-shadow: var(--sombra-hover);
+    transform: translateY(-6px);
+}
+
+.elemento-galeria img {
+    width: 100%;
+    height: 225px;
+
+    /* Evita recortar partes de la máquina */
+    object-fit: contain;
+    object-position: center;
+    background-color: #f8f9fc;
+    padding: 8px;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.elemento-galeria:hover img {
+    transform: scale(1.055);
+}
+
+.elemento-galeria figcaption {
+    padding: 13px 10px;
+    color: var(--azul-oscuro);
+    font-size: 0.88rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.elemento-galeria img.imagen-seleccionada {
+    outline: 4px solid var(--rojo-principal);
+    outline-offset: -4px;
+}
+
+
+/* ==================================================
+   5. VIDEO DEL PRODUCTO
+================================================== */
+
+.seccion-video {
+    padding: 80px 0;
+    background-color: var(--fondo-general);
+}
+
+.contenedor-video {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 12px;
+    background-color: #ffffff;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio-grande);
+    box-shadow: var(--sombra-tarjeta);
+}
+
+.contenedor-video video {
+    width: 100%;
+    max-height: 650px;
+    aspect-ratio: 16 / 9;
+    background-color: #000000;
+    border-radius: 14px;
+    object-fit: contain;
+}
+
+
+/* ==================================================
+   6. DESCRIPCIÓN Y FUNCIONAMIENTO
+================================================== */
+
+.seccion-descripcion-producto {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.contenido-descripcion-producto {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(300px, 0.6fr);
+    align-items: start;
+    gap: 45px;
+}
+
+.contenido-descripcion-producto h2 {
+    margin-bottom: 20px;
+    color: var(--azul-oscuro);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+}
+
+.contenido-descripcion-producto > div > p:not(.etiqueta-seccion) {
+    margin-bottom: 17px;
+    color: var(--texto-secundario);
+    font-size: 1.02rem;
+}
+
+.cuadro-informativo-producto {
+    padding: 28px;
+    background:
+        linear-gradient(
+            145deg,
+            var(--azul-oscuro),
+            var(--azul-principal)
+        );
+    color: #ffffff;
+    border-radius: var(--radio-grande);
+    box-shadow: var(--sombra-tarjeta);
+}
+
+.cuadro-informativo-producto h3 {
+    margin-bottom: 17px;
+    font-size: 1.4rem;
+}
+
+.cuadro-informativo-producto ul {
+    display: grid;
+    gap: 11px;
+    list-style: none;
+}
+
+.cuadro-informativo-producto li {
+    position: relative;
+    padding-left: 27px;
+    color: #e5edff;
+}
+
+.cuadro-informativo-producto li::before {
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+    content: "✓";
+    font-weight: 900;
+}
+
+
+/* ==================================================
+   7. TABLA DE ESPECIFICACIONES
+================================================== */
+
+.seccion-especificaciones {
+    padding: 80px 0;
+    background-color: var(--fondo-general);
+}
+
+.tabla-especificaciones {
+    max-width: 1050px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio-grande);
+    box-shadow: var(--sombra-tarjeta);
+}
+
+.fila-especificacion {
+    display: grid;
+    grid-template-columns: minmax(210px, 0.38fr) minmax(0, 0.62fr);
+    border-bottom: 1px solid var(--borde);
+}
+
+.fila-especificacion:last-child {
+    border-bottom: none;
+}
+
+.fila-especificacion span,
+.fila-especificacion strong {
+    padding: 17px 22px;
+}
+
+.fila-especificacion span {
+    background-color: var(--azul-claro);
+    color: var(--azul-oscuro);
+    font-size: 0.92rem;
+    font-weight: 800;
+}
+
+.fila-especificacion strong {
+    color: var(--texto-principal);
+    font-size: 0.94rem;
+    font-weight: 700;
+}
+
+.fila-especificacion:nth-child(even) strong {
+    background-color: #fafcff;
+}
+
+
+/* ==================================================
+   8. GARANTÍA Y SERVICIOS
+================================================== */
+
+.seccion-servicios-producto {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+
+/* ==================================================
+   9. CONTACTO FINAL DEL PRODUCTO
+================================================== */
+
+.contacto-producto {
+    position: relative;
+    overflow: hidden;
+    padding: 65px 0;
+    background:
+        linear-gradient(
+            120deg,
+            var(--azul-oscuro),
+            var(--azul-principal)
+        );
+    color: #ffffff;
+}
+
+.contacto-producto::before {
+    position: absolute;
+    top: -140px;
+    right: -100px;
+    width: 320px;
+    height: 320px;
+    border: 55px solid rgba(255, 255, 255, 0.06);
+    border-radius: 50%;
+    content: "";
+}
+
+.contenido-contacto-producto {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.contenido-contacto-producto > div {
+    max-width: 760px;
+}
+
+.etiqueta-contacto-producto {
+    margin-bottom: 7px;
+    color: #ffb3b3;
+    font-size: 0.85rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.contenido-contacto-producto h2 {
+    margin-bottom: 12px;
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+}
+
+.contenido-contacto-producto p {
+    color: #dce7ff;
+}
+
+
+/* ==================================================
+   10. TABLETAS Y PANTALLAS MEDIANAS
+================================================== */
+
+@media (max-width: 1100px) {
+
+    .detalle-producto-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .imagen-principal-producto img {
+        height: 470px;
+    }
+
+    .galeria-producto {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .contenido-descripcion-producto {
+        grid-template-columns: 1fr 0.75fr;
+    }
+}
+
+
+/* ==================================================
+   11. TABLETAS PEQUEÑAS
+================================================== */
+
+@media (max-width: 850px) {
+
+    .detalle-producto-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .imagen-principal-producto {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    .imagen-principal-producto img {
+        height: 500px;
+    }
+
+    .resumen-producto {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    .galeria-producto {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contenido-descripcion-producto {
+        grid-template-columns: 1fr;
+    }
+
+    .cuadro-informativo-producto {
+        max-width: 650px;
+    }
+
+    .contenido-contacto-producto {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* ==================================================
+   12. TELÉFONOS
+================================================== */
+
+@media (max-width: 620px) {
+
+    .detalle-producto {
+        padding: 35px 0 55px;
+    }
+
+    .imagen-principal-producto {
+        border-radius: var(--radio-mediano);
+    }
+
+    .imagen-principal-producto img {
+        height: 340px;
+    }
+
+    .etiqueta-garantia {
+        top: 13px;
+        left: 13px;
+        padding: 7px 11px;
+        font-size: 0.75rem;
+    }
+
+    .resumen-producto h1 {
+        font-size: 2.35rem;
+    }
+
+    .precio-detalle {
+        align-items: flex-start;
+        flex-direction: column;
+        font-size: 2.3rem;
+    }
+
+    .datos-destacados {
+        grid-template-columns: 1fr;
+    }
+
+    .boton-whatsapp-producto {
+        width: 100%;
+    }
+
+    .seccion-galeria,
+    .seccion-video,
+    .seccion-descripcion-producto,
+    .seccion-especificaciones,
+    .seccion-servicios-producto {
+        padding: 60px 0;
+    }
+
+    .galeria-producto {
+        display: flex;
+        margin-right: -3%;
+        margin-left: -3%;
+        padding: 0 3% 15px;
+        gap: 15px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+
+    .elemento-galeria {
+        min-width: 84%;
+        flex: 0 0 84%;
+        scroll-snap-align: center;
+    }
+
+    .elemento-galeria img {
+        height: 315px;
+    }
+
+    .contenedor-video {
+        padding: 7px;
+        border-radius: var(--radio-mediano);
+    }
+
+    .contenedor-video video {
+        border-radius: 9px;
+    }
+
+    .fila-especificacion {
+        grid-template-columns: 1fr;
+    }
+
+    .fila-especificacion span {
+        padding-bottom: 7px;
+    }
+
+    .fila-especificacion strong {
+        padding-top: 7px;
+    }
+
+    .contenido-contacto-producto {
+        text-align: center;
+    }
+
+    .contenido-contacto-producto .boton-whatsapp-producto {
+        margin: 0 auto;
+    }
+}
+
+
+/* ==================================================
+   13. TELÉFONOS PEQUEÑOS
+================================================== */
+
+@media (max-width: 390px) {
+
+    .imagen-principal-producto img {
+        height: 285px;
+    }
+
+    .resumen-producto h1 {
+        font-size: 2rem;
+    }
+
+    .elemento-galeria {
+        min-width: 91%;
+        flex-basis: 91%;
+    }
+
+    .elemento-galeria img {
+        height: 270px;
+    }
+}
+
+/* =========================================
+   SLIDER DE IMÁGENES DEL PRODUCTO
+========================================= */
+
+.slider-producto {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Imagen mostrada */
+.slider-producto .slider-imagen {
+    width: 100%;
+    height: 540px;
+    object-fit: contain;
+    object-position: center;
+    background-color: #ffffff;
+    padding: 12px;
+}
+
+
+/* Flechas */
+.slider-flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: rgba(11, 61, 145, 0.88);
+    color: #ffffff;
+
+    font-size: 1.4rem;
+
+    cursor: pointer;
+
+    z-index: 5;
+
+    transition:
+        background-color var(--transicion),
+        transform var(--transicion);
+}
+
+
+/* Flecha izquierda */
+.slider-anterior {
+    left: 15px;
+}
+
+
+/* Flecha derecha */
+.slider-siguiente {
+    right: 15px;
+}
+
+
+/* Efecto al pasar el mouse */
+.slider-flecha:hover {
+    background-color: var(--rojo-principal);
+    transform: translateY(-50%) scale(1.08);
+}
+
+
+/* Contador 1 / 5 */
+.slider-contador {
+    position: absolute;
+
+    bottom: 15px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    padding: 6px 13px;
+
+    background-color: rgba(0, 0, 0, 0.65);
+    color: #ffffff;
+
+    border-radius: 20px;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    z-index: 5;
+}
+
+
+/* En celular */
+@media (max-width: 620px) {
+
+    .slider-producto .slider-imagen {
+        height: 360px;
+    }
+
+    .slider-flecha {
+        width: 42px;
+        height: 42px;
+        font-size: 1.2rem;
+    }
+
+    .slider-anterior {
+        left: 8px;
+    }
+
+    .slider-siguiente {
+        right: 8px;
+    }
+
+}
