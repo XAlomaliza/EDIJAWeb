@@ -96,10 +96,7 @@
           <!-- =====================================================
      BUSCADOR DE PRODUCTOS
 ====================================================== -->
-          <div
-            class="buscador-catalogo"
-            id="catalogo-productos"
-          >
+          <div class="buscador-catalogo" id="catalogo-productos">
             <div class="campo-buscador">
               <i class="bi bi-search icono-buscador" aria-hidden="true"></i>
 
@@ -111,6 +108,7 @@
                 aria-label="Buscar productos"
               />
 
+              <!-- Limpiar búsqueda -->
               <button
                 type="button"
                 id="limpiar-busqueda"
@@ -119,6 +117,18 @@
                 hidden
               >
                 <i class="bi bi-x-lg" aria-hidden="true"></i>
+              </button>
+
+              <!-- Confirmar búsqueda -->
+              <button
+                type="button"
+                id="boton-buscar-productos"
+                class="boton-buscar-productos"
+                disabled
+              >
+                <i class="bi bi-search" aria-hidden="true"></i>
+
+                <span>Buscar</span>
               </button>
             </div>
 
@@ -622,6 +632,9 @@
       <!-- =========================================
          CONTACTO
     ========================================== -->
+      <!-- =========================================
+     CONTACTO
+========================================== -->
       <section class="seccion-contacto" id="contacto">
         <div class="contenedor">
           <div class="encabezado-seccion">
@@ -636,43 +649,51 @@
           </div>
 
           <div class="redes-sociales">
+            <!-- WhatsApp -->
             <a
               href="https://wa.me/593984717112"
+              class="red-whatsapp"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp de EDIJA"
             >
-              <i class="bi bi-whatsapp"></i>
+              <i class="bi bi-whatsapp" aria-hidden="true"></i>
               WhatsApp
             </a>
 
+            <!-- Facebook -->
             <a
-              href="LINK_DE_FACEBOOK"
+              href="https://www.facebook.com"
+              class="red-facebook"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook de EDIJA"
             >
-              <i class="bi bi-facebook"></i>
+              <i class="bi bi-facebook" aria-hidden="true"></i>
               Facebook
             </a>
 
+            <!-- Instagram -->
             <a
-              href="LINK_DE_INSTAGRAM"
+              href="https://www.instagram.com"
+              class="red-instagram"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram de EDIJA"
             >
-              <i class="bi bi-instagram"></i>
+              <i class="bi bi-instagram" aria-hidden="true"></i>
               Instagram
             </a>
 
+            <!-- TikTok -->
             <a
-              href="LINK_DE_TIKTOK"
+              href="https://www.tiktok.com"
+              class="red-tiktok"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="TikTok de EDIJA"
             >
-              <i class="bi bi-tiktok"></i>
+              <i class="bi bi-tiktok" aria-hidden="true"></i>
               TikTok
             </a>
           </div>
