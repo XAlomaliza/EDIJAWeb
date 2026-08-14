@@ -226,6 +226,662 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+  /* =========================================================
+   BUSCADOR INTELIGENTE DE PRODUCTOS
+========================================================= */
+
+const buscadorEDIJA =
+    document.getElementById("buscador-productos");
+
+const sugerenciasEDIJA =
+    document.getElementById("sugerencias-productos");
+
+const limpiarBuscadorEDIJA =
+    document.getElementById("limpiar-busqueda");
+
+const resultadoBuscadorEDIJA =
+    document.getElementById("resultado-busqueda");
+
+const sinResultadosEDIJA =
+    document.getElementById("sin-resultados-productos");
+
+const tarjetasBuscadorEDIJA =
+    Array.from(
+        document.querySelectorAll(
+            ".grid-productos .tarjeta-producto"
+        )
+    );
+
+
+/* =========================================================
+   PALABRAS CLAVE
+
+   No necesitamos modificar las tarjetas HTML.
+   Asociamos cada página con palabras relacionadas.
+========================================================= */
+
+const palabrasClaveEDIJA = {
+
+    "bomba-agua-2-pulgadas.html":
+        "bomba agua riego liquido agricultura campo gasolina",
+
+    "bomba-vacio.html":
+        "bomba vacio ordeño ganado vacas leche litros",
+
+    "briqueta-carbon.html":
+        "briquetadora briqueta carbon compactar produccion",
+
+    "clasificadora-granos.html":
+        "clasificadora granos maiz soya cafe frejol cacao separar limpiar",
+
+    "elevador.html":
+        "elevador material carga acero inoxidable transportar subir",
+
+    "mezclador-espiral.html":
+        "mezclador mezcladora espiral alimento balanceado animales ganado",
+
+    "mezcladora-balanceado-extrusora.html":
+        "extrusora alimento balanceado pellets peces camaron aves mascotas",
+
+    "mezcladora-balanceados.html":
+        "mezcladora balanceado alimento animales ganado preparar mezcla",
+
+    "molino.html":
+        "molino domestico moler molienda maiz granos harina seco humedo",
+
+    "montacarga-portatil.html":
+        "montacarga portatil electrico carga levantar transportar camion camioneta",
+
+    "motocultor-oruga-gasolina-9hp.html":
+        "motocultor oruga gasolina agricultura tierra suelo terreno campo",
+
+    "motoguadana.html":
+        "motoguadana motoguadaña gasolina pasto hierba cesped jardin cortar",
+
+    "ordenadora-1-puesto.html":
+        "ordeñadora ordenadora ordeño vacas vaca leche ganado un puesto",
+
+    "ordenadora-2-puesto.html":
+        "ordeñadora ordenadora ordeño vacas leche ganado dos puestos kurtsan",
+
+    "pelletilizadora.html":
+        "pelletilizadora pellet pellets alimento camaron peces pollo patos conejos ganado cerdos chivos",
+
+    "picadora-hierba.html":
+        "picadora hierba pasto silo ensilaje ganado vacas alimento",
+
+    "picadora-mixta.html":
+        "picadora mixta maiz caña azucar hierba pasto ganado moler triturar multifuncional",
+
+    "picadora-3-en-1.html":
+        "picadora tres 3 en 1 pasto triturar cortar maiz moler multifuncional",
+
+    "picadora-pasto.html":
+        "picadora pasto hierba ganado alimento animales triturar cortar",
+
+    "piladora.html":
+        "piladora arroz domestica cuatro 4 en 1 arocillo polvillo piedras impurezas limpiar",
+
+    "varios.html":
+        "otros productos maquinaria pedido agricultura ganaderia fumigacion boquilla atomizador accesorios"
+
+};
+
+
+/* =========================================================
+   NORMALIZAR TEXTO
+
+   Maíz -> maiz
+   ORDEÑADORA -> ordenadora
+========================================================= */
+
+function normalizarBusquedaEDIJA(texto) {
+
+    return texto
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .trim();
+
+}
+
+
+/* =========================================================
+   DISTANCIA LEVENSHTEIN
+
+   Permite tolerar errores pequeños:
+   picdora -> picadora
+   arros   -> arroz
+========================================================= */
+
+function distanciaEDIJA(a, b) {
+
+    const matriz = [];
+
+
+    for (let i = 0; i <= b.length; i++) {
+
+        matriz[i] = [i];
+
+    }
+
+
+    for (let j = 0; j <= a.length; j++) {
+
+        matriz[0][j] = j;
+
+    }
+
+
+    for (let i = 1; i <= b.length; i++) {
+
+        for (let j = 1; j <= a.length; j++) {
+
+            if (
+                b.charAt(i - 1) ===
+                a.charAt(j - 1)
+            ) {
+
+                matriz[i][j] =
+                    matriz[i - 1][j - 1];
+
+            }
+
+            else {
+
+                matriz[i][j] =
+                    Math.min(
+
+                        matriz[i - 1][j - 1] + 1,
+
+                        matriz[i][j - 1] + 1,
+
+                        matriz[i - 1][j] + 1
+
+                    );
+
+            }
+
+        }
+
+    }
+
+
+    return matriz[b.length][a.length];
+
+}
+
+
+/* =========================================================
+   COMPARAR PALABRAS
+========================================================= */
+
+function coincidePalabraEDIJA(
+    buscada,
+    producto
+) {
+
+    /* Coincidencia normal */
+
+    if (
+        producto.includes(buscada) ||
+        buscada.includes(producto)
+    ) {
+
+        return true;
+
+    }
+
+
+    /* Para palabras muy cortas no usamos tolerancia */
+
+    if (
+        buscada.length < 4 ||
+        producto.length < 4
+    ) {
+
+        return false;
+
+    }
+
+
+    const distancia =
+        distanciaEDIJA(
+            buscada,
+            producto
+        );
+
+
+    const erroresPermitidos =
+        buscada.length >= 7
+            ? 2
+            : 1;
+
+
+    return distancia <= erroresPermitidos;
+
+}
+
+
+/* =========================================================
+   PUNTUAR PRODUCTO
+========================================================= */
+
+function puntuarProductoEDIJA(
+    tarjeta,
+    busqueda
+) {
+
+    const nombre =
+        normalizarBusquedaEDIJA(
+            tarjeta.querySelector("h3")
+                ?.textContent || ""
+        );
+
+
+    const ruta =
+        tarjeta.dataset.producto || "";
+
+
+    const archivo =
+        ruta.split("/").pop();
+
+
+    const claves =
+        normalizarBusquedaEDIJA(
+            palabrasClaveEDIJA[archivo] || ""
+        );
+
+
+    const textoCompleto =
+        `${nombre} ${claves}`;
+
+
+    /* Si la frase aparece directamente */
+
+    if (
+        textoCompleto.includes(busqueda)
+    ) {
+
+        return 100;
+
+    }
+
+
+    const palabrasBuscadas =
+        busqueda.split(/\s+/);
+
+
+    const palabrasProducto =
+        textoCompleto.split(/\s+/);
+
+
+    let puntuacion = 0;
+
+
+    palabrasBuscadas.forEach(
+        (palabraBuscada) => {
+
+            const encontrada =
+                palabrasProducto.some(
+                    (palabraProducto) =>
+                        coincidePalabraEDIJA(
+                            palabraBuscada,
+                            palabraProducto
+                        )
+                );
+
+
+            if (encontrada) {
+
+                puntuacion += 20;
+
+            }
+
+        }
+    );
+
+
+    return puntuacion;
+
+}
+
+
+/* =========================================================
+   MOSTRAR SUGERENCIAS
+
+   SOLO MOSTRAMOS EL NOMBRE.
+   NO HAY FOTOGRAFÍAS.
+========================================================= */
+
+function mostrarSugerenciasEDIJA(
+    resultados
+) {
+
+    if (!sugerenciasEDIJA) {
+        return;
+    }
+
+
+    sugerenciasEDIJA.innerHTML = "";
+
+
+    if (
+        resultados.length === 0 ||
+        !buscadorEDIJA.value.trim()
+    ) {
+
+        sugerenciasEDIJA.hidden = true;
+
+        return;
+
+    }
+
+
+    /* Máximo 7 sugerencias */
+
+    resultados
+        .slice(0, 7)
+        .forEach(
+            ({ tarjeta }) => {
+
+                const enlace =
+                    tarjeta.querySelector("a");
+
+
+                const nombre =
+                    tarjeta.querySelector("h3");
+
+
+                if (
+                    !enlace ||
+                    !nombre
+                ) {
+
+                    return;
+
+                }
+
+
+                const opcion =
+                    document.createElement(
+                        "button"
+                    );
+
+
+                opcion.type = "button";
+
+                opcion.className =
+                    "sugerencia-producto";
+
+
+                const texto =
+                    document.createElement(
+                        "strong"
+                    );
+
+
+                texto.textContent =
+                    nombre.textContent;
+
+
+                opcion.appendChild(texto);
+
+
+                opcion.addEventListener(
+                    "click",
+                    () => {
+
+                        window.location.href =
+                            enlace.href;
+
+                    }
+                );
+
+
+                sugerenciasEDIJA.appendChild(
+                    opcion
+                );
+
+            }
+        );
+
+
+    sugerenciasEDIJA.hidden = false;
+
+}
+
+
+/* =========================================================
+   BUSCAR
+========================================================= */
+
+function ejecutarBusquedaEDIJA() {
+
+    if (!buscadorEDIJA) {
+        return;
+    }
+
+
+    const busqueda =
+        normalizarBusquedaEDIJA(
+            buscadorEDIJA.value
+        );
+
+
+    /* Botón limpiar */
+
+    if (limpiarBuscadorEDIJA) {
+
+        limpiarBuscadorEDIJA.hidden =
+            busqueda.length === 0;
+
+    }
+
+
+    /* Si está vacío, mostrar todo */
+
+    if (!busqueda) {
+
+        tarjetasBuscadorEDIJA.forEach(
+            (tarjeta) => {
+
+                tarjeta.style.display = "";
+
+            }
+        );
+
+
+        if (sugerenciasEDIJA) {
+
+            sugerenciasEDIJA.hidden = true;
+
+            sugerenciasEDIJA.innerHTML = "";
+
+        }
+
+
+        if (resultadoBuscadorEDIJA) {
+
+            resultadoBuscadorEDIJA.textContent =
+                "";
+
+        }
+
+
+        if (sinResultadosEDIJA) {
+
+            sinResultadosEDIJA.hidden = true;
+
+        }
+
+
+        return;
+
+    }
+
+
+    const resultados = [];
+
+
+    tarjetasBuscadorEDIJA.forEach(
+        (tarjeta) => {
+
+            const puntuacion =
+                puntuarProductoEDIJA(
+                    tarjeta,
+                    busqueda
+                );
+
+
+            if (puntuacion > 0) {
+
+                tarjeta.style.display = "";
+
+
+                resultados.push({
+                    tarjeta,
+                    puntuacion
+                });
+
+            }
+
+            else {
+
+                tarjeta.style.display = "none";
+
+            }
+
+        }
+    );
+
+
+    /* Mejor coincidencia primero */
+
+    resultados.sort(
+        (a, b) =>
+            b.puntuacion -
+            a.puntuacion
+    );
+
+
+    /* Cantidad */
+
+    if (resultadoBuscadorEDIJA) {
+
+        if (resultados.length === 1) {
+
+            resultadoBuscadorEDIJA.textContent =
+                "1 producto encontrado";
+
+        }
+
+        else if (
+            resultados.length > 1
+        ) {
+
+            resultadoBuscadorEDIJA.textContent =
+                `${resultados.length} productos encontrados`;
+
+        }
+
+        else {
+
+            resultadoBuscadorEDIJA.textContent =
+                "No se encontraron productos";
+
+        }
+
+    }
+
+
+    if (sinResultadosEDIJA) {
+
+        sinResultadosEDIJA.hidden =
+            resultados.length !== 0;
+
+    }
+
+
+    mostrarSugerenciasEDIJA(
+        resultados
+    );
+
+}
+
+
+/* =========================================================
+   EVENTOS DEL BUSCADOR
+========================================================= */
+
+if (buscadorEDIJA) {
+
+    buscadorEDIJA.addEventListener(
+        "input",
+        ejecutarBusquedaEDIJA
+    );
+
+
+    buscadorEDIJA.addEventListener(
+        "focus",
+        () => {
+
+            if (
+                buscadorEDIJA.value.trim()
+            ) {
+
+                ejecutarBusquedaEDIJA();
+
+            }
+
+        }
+    );
+
+}
+
+
+/* Limpiar */
+
+if (limpiarBuscadorEDIJA) {
+
+    limpiarBuscadorEDIJA.addEventListener(
+        "click",
+        () => {
+
+            buscadorEDIJA.value = "";
+
+            ejecutarBusquedaEDIJA();
+
+            buscadorEDIJA.focus();
+
+        }
+    );
+
+}
+
+
+/* Cerrar desplegable al hacer clic fuera */
+
+document.addEventListener(
+    "click",
+    (evento) => {
+
+        if (
+            sugerenciasEDIJA &&
+            !evento.target.closest(
+                ".buscador-catalogo"
+            )
+        ) {
+
+            sugerenciasEDIJA.hidden = true;
+
+        }
+
+    }
+);
+
+
+  
 });
 
 

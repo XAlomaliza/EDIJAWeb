@@ -1,119 +1,85 @@
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+    <meta
+      name="description"
+      content="Piladora doméstica 4 en 1 EDIJA para pilado de arroz, separación de arocillo, eliminación de piedras e impurezas y obtención de polvillo molido."
+    />
 
-  <meta
-    name="description"
-    content="Piladora doméstica 4 en 1 EDIJA para pilado de arroz, separación de arocillo, eliminación de piedras e impurezas y obtención de polvillo molido."
-  />
+    <meta name="author" content="EDIJA" />
 
-  <meta name="author" content="EDIJA" />
+    <title>Piladora doméstica 4 en 1 | EDIJA</title>
 
-  <title>Piladora doméstica 4 en 1 | EDIJA</title>
+    <!-- Estilos generales -->
+    <link rel="stylesheet" href="../css/estilos.css" />
 
-  <!-- Estilos generales -->
-  <link rel="stylesheet" href="../css/estilos.css" />
+    <!-- Estilos de productos -->
+    <link rel="stylesheet" href="../css/productos.css" />
 
-  <!-- Estilos de productos -->
-  <link rel="stylesheet" href="../css/productos.css" />
+    <!-- Íconos Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
 
-  <!-- Íconos Bootstrap -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-  />
-</head>
-
-
-<body>
-
-  <!-- =========================================
+  <body>
+    <!-- =========================================
        ENCABEZADO
   ========================================== -->
-  <header class="encabezado">
+    <header class="encabezado">
+      <div class="contenedor barra-navegacion">
+        <a href="../index.html" class="nombre-empresa"> EDIJA </a>
 
-    <div class="contenedor barra-navegacion">
+        <button
+          class="boton-menu"
+          id="boton-menu"
+          type="button"
+          aria-label="Abrir menú de navegación"
+          aria-controls="menu-principal"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
 
-      <a href="../index.html" class="nombre-empresa">
-        EDIJA
-      </a>
+        <nav
+          class="menu-principal"
+          id="menu-principal"
+          aria-label="Navegación principal"
+        >
+          <a href="../index.html#catalogo-productos"> Productos </a>
+          <a href="../index.html#contacto">Contáctanos</a>
+        </nav>
+      </div>
+    </header>
 
-      <button
-        class="boton-menu"
-        id="boton-menu"
-        type="button"
-        aria-label="Abrir menú de navegación"
-        aria-controls="menu-principal"
-        aria-expanded="false"
-      >
-        ☰
-      </button>
-
-      <nav
-        class="menu-principal"
-        id="menu-principal"
-        aria-label="Navegación principal"
-      >
-        <a href="../index.html">Inicio</a>
-        <a href="../index.html#productos">Productos</a>
-        <a href="../index.html#contacto">Contáctanos</a>
-      </nav>
-
-    </div>
-
-  </header>
-
-
-  <main>
-
-    <!-- =========================================
+    <main>
+      <!-- =========================================
          RUTA DE NAVEGACIÓN
     ========================================== -->
-    <section class="ruta-producto">
+      <section class="ruta-producto">
+        <div class="contenedor">
+          <nav aria-label="Ruta de navegación">
 
-      <div class="contenedor">
+            <a href="../index.html#catalogo-productos"> Productos </a>
 
-        <nav aria-label="Ruta de navegación">
+            <span aria-hidden="true">/</span>
 
-          <a href="../index.html">
-            Inicio
-          </a>
+            <strong> Piladora doméstica 4 en 1 </strong>
+          </nav>
+        </div>
+      </section>
 
-          <span aria-hidden="true">/</span>
-
-          <a href="../index.html#productos">
-            Productos
-          </a>
-
-          <span aria-hidden="true">/</span>
-
-          <strong>
-            Piladora doméstica 4 en 1
-          </strong>
-
-        </nav>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================================
+      <!-- =========================================
          INFORMACIÓN PRINCIPAL
     ========================================== -->
-    <section class="detalle-producto">
-
-      <div class="contenedor detalle-producto-grid">
-
-
-        <!-- =========================================
+      <section class="detalle-producto">
+        <div class="contenedor detalle-producto-grid">
+          <!-- =========================================
              SLIDER DE IMÁGENES
 
              Actualmente:
@@ -122,333 +88,197 @@
              Si después agregas más fotografías,
              solo cambia data-total.
         ========================================== -->
-        <div
-          class="imagen-principal-producto slider-producto"
-          data-carpeta="piladora"
-          data-total="1"
-          data-indice="1"
-        >
-
-          <!-- Flecha izquierda -->
-          <button
-            class="slider-flecha slider-anterior"
-            type="button"
-            aria-label="Ver imagen anterior"
+          <div
+            class="imagen-principal-producto slider-producto"
+            data-carpeta="piladora"
+            data-total="1"
+            data-indice="1"
           >
-            <i
-              class="bi bi-chevron-left"
-              aria-hidden="true"
-            ></i>
-          </button>
-
-
-          <!-- Imagen principal -->
-          <img
-            src="../imagenes/piladora/f1.png"
-            alt="Piladora doméstica 4 en 1 EDIJA"
-            id="imagen-principal"
-            class="slider-imagen"
-          />
-
-
-          <!-- Flecha derecha -->
-          <button
-            class="slider-flecha slider-siguiente"
-            type="button"
-            aria-label="Ver imagen siguiente"
-          >
-            <i
-              class="bi bi-chevron-right"
-              aria-hidden="true"
-            ></i>
-          </button>
-
-
-          <!-- Contador -->
-          <span
-            class="slider-contador"
-            aria-live="polite"
-          >
-            1 / 1
-          </span>
-
-        </div>
-
-
-        <!-- =========================================
-             INFORMACIÓN DEL PRODUCTO
-        ========================================== -->
-        <div class="resumen-producto">
-
-          <p class="etiqueta-producto">
-            Procesamiento de arroz
-          </p>
-
-          <h1>
-            Piladora doméstica 4 en 1
-          </h1>
-
-          <p class="descripcion-principal-producto">
-            Máquina doméstica multifuncional diseñada para realizar
-            diferentes etapas del procesamiento del arroz en un solo equipo.
-          </p>
-
-          <p class="descripcion-principal-producto">
-            Permite obtener arroz pilado, separar el arocillo,
-            eliminar piedras e impurezas y generar polvillo molido
-            durante el proceso.
-          </p>
-
-
-          <!-- =========================================
-               PRECIO
-          ========================================== -->
-          <p class="precio-detalle">
-            $1,250
-            <span>Precio negociable</span>
-          </p>
-
-
-          <!-- =========================================
-               CARACTERÍSTICAS
-          ========================================== -->
-          <div class="datos-destacados">
-
-
-            <!-- Función 1 -->
-            <article class="dato-destacado">
-
-              <span>
-                Función 1
-              </span>
-
-              <strong>
-                Pilado completo de arroz
-              </strong>
-
-            </article>
-
-
-            <!-- Función 2 -->
-            <article class="dato-destacado">
-
-              <span>
-                Función 2
-              </span>
-
-              <strong>
-                Separación de arocillo
-              </strong>
-
-            </article>
-
-
-            <!-- Función 3 -->
-            <article class="dato-destacado">
-
-              <span>
-                Función 3
-              </span>
-
-              <strong>
-                Eliminación de piedras e impurezas
-              </strong>
-
-            </article>
-
-
-            <!-- Función 4 -->
-            <article class="dato-destacado">
-
-              <span>
-                Función 4
-              </span>
-
-              <strong>
-                Obtención de polvillo molido
-              </strong>
-
-            </article>
-
-
-            <!-- Potencia -->
-            <article class="dato-destacado">
-
-              <span>
-                Potencia del motor
-              </span>
-
-              <strong>
-                5.5 HP
-              </strong>
-
-            </article>
-
-
-            <!-- Voltaje -->
-            <article class="dato-destacado">
-
-              <span>
-                Voltaje
-              </span>
-
-              <strong>
-                220 V
-              </strong>
-
-            </article>
-
-
-            <!-- Producción -->
-            <article class="dato-destacado">
-
-              <span>
-                Producción
-              </span>
-
-              <strong>
-                Hasta 170 kg/h
-              </strong>
-
-            </article>
-
-
-            <!-- Altura -->
-            <article class="dato-destacado">
-
-              <span>
-                Altura
-              </span>
-
-              <strong>
-                107 cm
-                <br />
-                1.07 m
-              </strong>
-
-            </article>
-
-
-            <!-- Tipo -->
-            <article class="dato-destacado">
-
-              <span>
-                Tipo de equipo
-              </span>
-
-              <strong>
-                Multifuncional 4 en 1
-              </strong>
-
-            </article>
-
-
-            <!-- Uso -->
-            <article class="dato-destacado">
-
-              <span>
-                Aplicación
-              </span>
-
-              <strong>
-                Procesamiento doméstico de arroz
-              </strong>
-
-            </article>
-
-
-            <!-- Garantía -->
-            <article class="dato-destacado">
-
-              <span>
-                Garantía
-              </span>
-
-              <strong>
-                Incluida
-              </strong>
-
-            </article>
-
-
-            <!-- Servicio -->
-            <article class="dato-destacado">
-
-              <span>
-                Servicio
-              </span>
-
-              <strong>
-                Servicio técnico disponible
-              </strong>
-
-            </article>
-
+            <!-- Flecha izquierda -->
+            <button
+              class="slider-flecha slider-anterior"
+              type="button"
+              aria-label="Ver imagen anterior"
+            >
+              <i class="bi bi-chevron-left" aria-hidden="true"></i>
+            </button>
+
+            <!-- Imagen principal -->
+            <img
+              src="../imagenes/piladora/f1.png"
+              alt="Piladora doméstica 4 en 1 EDIJA"
+              id="imagen-principal"
+              class="slider-imagen"
+            />
+
+            <!-- Flecha derecha -->
+            <button
+              class="slider-flecha slider-siguiente"
+              type="button"
+              aria-label="Ver imagen siguiente"
+            >
+              <i class="bi bi-chevron-right" aria-hidden="true"></i>
+            </button>
+
+            <!-- Contador -->
+            <span class="slider-contador" aria-live="polite"> 1 / 1 </span>
           </div>
 
-
           <!-- =========================================
+             INFORMACIÓN DEL PRODUCTO
+        ========================================== -->
+          <div class="resumen-producto">
+            <p class="etiqueta-producto">Procesamiento de arroz</p>
+
+            <h1>Piladora doméstica 4 en 1</h1>
+
+            <p class="descripcion-principal-producto">
+              Máquina doméstica multifuncional diseñada para realizar diferentes
+              etapas del procesamiento del arroz en un solo equipo.
+            </p>
+
+            <p class="descripcion-principal-producto">
+              Permite obtener arroz pilado, separar el arocillo, eliminar
+              piedras e impurezas y generar polvillo molido durante el proceso.
+            </p>
+
+            <!-- =========================================
+               PRECIO
+          ========================================== -->
+            <p class="precio-detalle">
+              $1,250
+              <span>Precio negociable</span>
+            </p>
+
+            <!-- =========================================
+               CARACTERÍSTICAS
+          ========================================== -->
+            <div class="datos-destacados">
+              <!-- Función 1 -->
+              <article class="dato-destacado">
+                <span> Función 1 </span>
+
+                <strong> Pilado completo de arroz </strong>
+              </article>
+
+              <!-- Función 2 -->
+              <article class="dato-destacado">
+                <span> Función 2 </span>
+
+                <strong> Separación de arocillo </strong>
+              </article>
+
+              <!-- Función 3 -->
+              <article class="dato-destacado">
+                <span> Función 3 </span>
+
+                <strong> Eliminación de piedras e impurezas </strong>
+              </article>
+
+              <!-- Función 4 -->
+              <article class="dato-destacado">
+                <span> Función 4 </span>
+
+                <strong> Obtención de polvillo molido </strong>
+              </article>
+
+              <!-- Potencia -->
+              <article class="dato-destacado">
+                <span> Potencia del motor </span>
+
+                <strong> 5.5 HP </strong>
+              </article>
+
+              <!-- Voltaje -->
+              <article class="dato-destacado">
+                <span> Voltaje </span>
+
+                <strong> 220 V </strong>
+              </article>
+
+              <!-- Producción -->
+              <article class="dato-destacado">
+                <span> Producción </span>
+
+                <strong> Hasta 170 kg/h </strong>
+              </article>
+
+              <!-- Altura -->
+              <article class="dato-destacado">
+                <span> Altura </span>
+
+                <strong>
+                  107 cm
+                  <br />
+                  1.07 m
+                </strong>
+              </article>
+
+              <!-- Tipo -->
+              <article class="dato-destacado">
+                <span> Tipo de equipo </span>
+
+                <strong> Multifuncional 4 en 1 </strong>
+              </article>
+
+              <!-- Uso -->
+              <article class="dato-destacado">
+                <span> Aplicación </span>
+
+                <strong> Procesamiento doméstico de arroz </strong>
+              </article>
+
+              <!-- Garantía -->
+              <article class="dato-destacado">
+                <span> Garantía </span>
+
+                <strong> Incluida </strong>
+              </article>
+
+              <!-- Servicio -->
+              <article class="dato-destacado">
+                <span> Servicio </span>
+
+                <strong> Servicio técnico disponible </strong>
+              </article>
+            </div>
+
+            <!-- =========================================
                WHATSAPP
           ========================================== -->
-          <a
-            href="https://wa.me/593984717112?text=Hola,%20estoy%20interesado%20en%20la%20piladora%20dom%C3%A9stica%204%20en%201."
-            class="boton-whatsapp-producto"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+            <a
+              href="https://wa.me/593984717112?text=Hola,%20estoy%20interesado%20en%20la%20piladora%20dom%C3%A9stica%204%20en%201."
+              class="boton-whatsapp-producto"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-whatsapp" aria-hidden="true"></i>
 
-            <i
-              class="bi bi-whatsapp"
-              aria-hidden="true"
-            ></i>
-
-            Consultar por WhatsApp
-
-          </a>
-
+              Consultar por WhatsApp
+            </a>
+          </div>
         </div>
+      </section>
+    </main>
 
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- =========================================
+    <!-- =========================================
        PIE DE PÁGINA
   ========================================== -->
-  <footer class="pie-pagina">
+    <footer class="pie-pagina">
+      <div class="contenedor contenido-pie">
+        <div>
+          <strong> EDIJA </strong>
 
-    <div class="contenedor contenido-pie">
+          <p>Maquinaria agrícola para tu trabajo.</p>
+        </div>
 
-      <div>
-
-        <strong>
-          EDIJA
-        </strong>
-
-        <p>
-          Maquinaria agrícola para tu trabajo.
-        </p>
-
+        <p>© <span id="anio"></span> EDIJA. Todos los derechos reservados.</p>
       </div>
+    </footer>
 
-      <p>
-        © <span id="anio"></span> EDIJA.
-        Todos los derechos reservados.
-      </p>
-
-    </div>
-
-  </footer>
-
-
-  <!-- =========================================
+    <!-- =========================================
        JAVASCRIPT
   ========================================== -->
-  <script src="../js/script.js"></script>
-
-</body>
-
+    <script src="../js/script.js"></script>
+  </body>
 </html>

@@ -1,235 +1,166 @@
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+    <meta
+      name="description"
+      content="Briquetadora de carbón EDIJA con motor de 22 kW, alimentación trifásica de 380 V o 220 V y producción de hasta 400 kg por hora."
+    />
 
-  <meta
-    name="description"
-    content="Briquetadora de carbón EDIJA con motor de 22 kW, alimentación trifásica de 380 V o 220 V y producción de hasta 400 kg por hora."
-  />
+    <meta name="author" content="EDIJA" />
 
-  <meta name="author" content="EDIJA" />
+    <title>Briquetadora de carbón | EDIJA</title>
 
-  <title>Briquetadora de carbón | EDIJA</title>
+    <!-- Estilos generales -->
+    <link rel="stylesheet" href="../css/estilos.css" />
 
-  <!-- Estilos generales -->
-  <link rel="stylesheet" href="../css/estilos.css" />
+    <!-- Estilos de productos -->
+    <link rel="stylesheet" href="../css/productos.css" />
 
-  <!-- Estilos de productos -->
-  <link rel="stylesheet" href="../css/productos.css" />
+    <!-- Íconos Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
 
-  <!-- Íconos Bootstrap -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-  />
-</head>
-
-
-<body>
-
-  <!-- =========================================
+  <body>
+    <!-- =========================================
        ENCABEZADO
   ========================================== -->
-  <header class="encabezado">
+    <header class="encabezado">
+      <div class="contenedor barra-navegacion">
+        <a href="../index.html" class="nombre-empresa"> EDIJA </a>
 
-    <div class="contenedor barra-navegacion">
+        <button
+          class="boton-menu"
+          id="boton-menu"
+          type="button"
+          aria-label="Abrir menú de navegación"
+          aria-controls="menu-principal"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
 
-      <a href="../index.html" class="nombre-empresa">
-        EDIJA
-      </a>
+        <nav
+          class="menu-principal"
+          id="menu-principal"
+          aria-label="Navegación principal"
+        >
+          <a href="../index.html">Inicio</a>
+          <a href="../index.html#catalogo-productos"> Productos </a>
+          <a href="../index.html#contacto">Contáctanos</a>
+        </nav>
+      </div>
+    </header>
 
-      <button
-        class="boton-menu"
-        id="boton-menu"
-        type="button"
-        aria-label="Abrir menú de navegación"
-        aria-controls="menu-principal"
-        aria-expanded="false"
-      >
-        ☰
-      </button>
-
-      <nav
-        class="menu-principal"
-        id="menu-principal"
-        aria-label="Navegación principal"
-      >
-        <a href="../index.html">Inicio</a>
-        <a href="../index.html#productos">Productos</a>
-        <a href="../index.html#contacto">Contáctanos</a>
-      </nav>
-
-    </div>
-
-  </header>
-
-
-  <main>
-
-    <!-- =========================================
+    <main>
+      <!-- =========================================
          RUTA DE NAVEGACIÓN
     ========================================== -->
-    <section class="ruta-producto">
+      <section class="ruta-producto">
+        <div class="contenedor">
+          <nav aria-label="Ruta de navegación">
 
-      <div class="contenedor">
+            <a href="../index.html#catalogo-productos"> Productos </a>
 
-        <nav aria-label="Ruta de navegación">
+            <span aria-hidden="true">/</span>
 
-          <a href="../index.html">
-            Inicio
-          </a>
+            <strong> Briquetadora de carbón </strong>
+          </nav>
+        </div>
+      </section>
 
-          <span aria-hidden="true">/</span>
-
-          <a href="../index.html#productos">
-            Productos
-          </a>
-
-          <span aria-hidden="true">/</span>
-
-          <strong>
-            Briquetadora de carbón
-          </strong>
-
-        </nav>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================================
+      <!-- =========================================
          INFORMACIÓN DEL PRODUCTO
     ========================================== -->
-    <section class="detalle-producto">
-
-      <div class="contenedor detalle-producto-grid">
-
-        <!-- Imagen principal -->
-        <div class="imagen-principal-producto">
-
-          <img
-            src="../imagenes/briqueta-carbon/f1.png"
-            alt="Briquetadora de carbón EDIJA"
-            id="imagen-principal"
-          />
-
-        </div>
-
-
-        <!-- Información del producto -->
-        <div class="resumen-producto">
-
-          <p class="etiqueta-producto">
-            Maquinaria para producción
-          </p>
-
-          <h1>
-            Briquetadora de carbón
-          </h1>
-
-          <p class="descripcion-principal-producto">
-            Máquina diseñada para la producción de briquetas de carbón,
-            con alta capacidad de trabajo y alimentación eléctrica trifásica.
-          </p>
-
-
-          <!-- Precio -->
-          <p class="precio-detalle">
-            $5,500
-            <span>Precio negociable</span>
-          </p>
-
-
-          <!-- Características principales -->
-          <div class="datos-destacados">
-
-            <article class="dato-destacado">
-              <span>Potencia</span>
-              <strong>22 kW</strong>
-            </article>
-
-            <article class="dato-destacado">
-              <span>Voltaje</span>
-              <strong>Trifásico 380 V / 220 V</strong>
-            </article>
-
-            <article class="dato-destacado">
-              <span>Producción</span>
-              <strong>400 kg/h</strong>
-            </article>
-
-            <article class="dato-destacado">
-              <span>Servicio</span>
-              <strong>Garantía y servicio técnico</strong>
-            </article>
-
+      <section class="detalle-producto">
+        <div class="contenedor detalle-producto-grid">
+          <!-- Imagen principal -->
+          <div class="imagen-principal-producto">
+            <img
+              src="../imagenes/briqueta-carbon/f1.png"
+              alt="Briquetadora de carbón EDIJA"
+              id="imagen-principal"
+            />
           </div>
 
+          <!-- Información del producto -->
+          <div class="resumen-producto">
+            <p class="etiqueta-producto">Maquinaria para producción</p>
 
-          <!-- Botón único de WhatsApp -->
-          <a
-            href="https://wa.me/593984717112?text=Hola,%20estoy%20interesado%20en%20la%20briquetadora%20de%20carb%C3%B3n."
-            class="boton-whatsapp-producto"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i
-              class="bi bi-whatsapp"
-              aria-hidden="true"
-            ></i>
+            <h1>Briquetadora de carbón</h1>
 
-            Consultar por WhatsApp
-          </a>
+            <p class="descripcion-principal-producto">
+              Máquina diseñada para la producción de briquetas de carbón, con
+              alta capacidad de trabajo y alimentación eléctrica trifásica.
+            </p>
 
+            <!-- Precio -->
+            <p class="precio-detalle">
+              $5,500
+              <span>Precio negociable</span>
+            </p>
+
+            <!-- Características principales -->
+            <div class="datos-destacados">
+              <article class="dato-destacado">
+                <span>Potencia</span>
+                <strong>22 kW</strong>
+              </article>
+
+              <article class="dato-destacado">
+                <span>Voltaje</span>
+                <strong>Trifásico 380 V / 220 V</strong>
+              </article>
+
+              <article class="dato-destacado">
+                <span>Producción</span>
+                <strong>400 kg/h</strong>
+              </article>
+
+              <article class="dato-destacado">
+                <span>Servicio</span>
+                <strong>Garantía y servicio técnico</strong>
+              </article>
+            </div>
+
+            <!-- Botón único de WhatsApp -->
+            <a
+              href="https://wa.me/593984717112?text=Hola,%20estoy%20interesado%20en%20la%20briquetadora%20de%20carb%C3%B3n."
+              class="boton-whatsapp-producto"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-whatsapp" aria-hidden="true"></i>
+
+              Consultar por WhatsApp
+            </a>
+          </div>
         </div>
+      </section>
+    </main>
 
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- =========================================
+    <!-- =========================================
        PIE DE PÁGINA
   ========================================== -->
-  <footer class="pie-pagina">
+    <footer class="pie-pagina">
+      <div class="contenedor contenido-pie">
+        <div>
+          <strong> EDIJA </strong>
 
-    <div class="contenedor contenido-pie">
+          <p>Maquinaria agrícola para tu trabajo.</p>
+        </div>
 
-      <div>
-
-        <strong>
-          EDIJA
-        </strong>
-
-        <p>
-          Maquinaria agrícola para tu trabajo.
-        </p>
-
+        <p>© <span id="anio"></span> EDIJA. Todos los derechos reservados.</p>
       </div>
+    </footer>
 
-      <p>
-        © <span id="anio"></span> EDIJA.
-        Todos los derechos reservados.
-      </p>
-
-    </div>
-
-  </footer>
-
-
-  <!-- JavaScript -->
-  <script src="../js/script.js"></script>
-
-</body>
-
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
+  </body>
 </html>

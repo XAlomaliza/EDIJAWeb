@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -7,17 +8,17 @@
 
     <meta
       name="description"
-      content="EDIJA ofrece maquinaria agrícola, ganadera y equipos de procesamiento seleccionados por su calidad, resistencia y funcionalidad, con garantía y servicio técnico."
+      content="EDIJA - Catálogo de maquinaria agrícola, equipos de procesamiento, ordeño y producción."
     />
 
     <meta name="author" content="EDIJA" />
 
-    <title>EDIJA | Maquinaria agrícola y equipos</title>
+    <title>EDIJA | Maquinaria agrícola</title>
 
     <!-- Estilos generales -->
     <link rel="stylesheet" href="css/estilos.css" />
 
-    <!-- Bootstrap Icons -->
+    <!-- Íconos Bootstrap -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
@@ -25,18 +26,12 @@
   </head>
 
   <body>
-    <!-- =====================================================
+    <!-- =========================================
        ENCABEZADO
-  ====================================================== -->
+  ========================================== -->
     <header class="encabezado">
       <div class="contenedor barra-navegacion">
-        <a
-          href="#inicio"
-          class="nombre-empresa"
-          aria-label="Ir al inicio de EDIJA"
-        >
-          EDIJA
-        </a>
+        <a href="index.html" class="nombre-empresa"> EDIJA </a>
 
         <button
           class="boton-menu"
@@ -55,64 +50,118 @@
           aria-label="Navegación principal"
         >
           <a href="#inicio">Inicio</a>
-          <a href="#productos">Productos</a>
-          <a href="#nosotros">información</a>
+          <a href="#catalogo-productos">Productos</a>
           <a href="#contacto">Contáctanos</a>
         </nav>
       </div>
     </header>
 
     <main>
-      <!-- =====================================================
-         PRESENTACIÓN PRINCIPAL
-    ====================================================== -->
+      <!-- =========================================
+         PRESENTACIÓN
+    ========================================== -->
       <section class="presentacion" id="inicio">
         <div class="contenedor contenido-presentacion">
-          <p class="etiqueta-presentacion">Maquinaria agrícola y ganadera</p>
+          <p class="etiqueta-presentacion">Maquinaria y equipos</p>
 
           <h1>EDIJA</h1>
 
-          <h2>Equipos confiables para hacer más eficiente tu trabajo</h2>
-
-          <p class="descripcion-presentacion">
-            Seleccionamos maquinaria fabricada con materiales resistentes y
-            trabajamos con proveedores e importadores especializados, incluyendo
-            equipos y componentes de procedencia europea. Nuestro objetivo es
-            ofrecer soluciones prácticas para agricultura, ganadería y
-            procesamiento, acompañadas de garantía y servicio técnico.
+          <p class="texto-presentacion">
+            Invierte en maquinaria pensada para mejorar el trabajo y el
+            crecimiento de tu negocio. En EDIJA seleccionamos equipos
+            resistentes, funcionales y adecuados para las necesidades del sector
+            agrícola y ganadero. Nuestro compromiso es ofrecer productos
+            confiables, acompañados de garantía y servicio técnico, para que
+            puedas realizar tu compra con mayor seguridad y tranquilidad.
           </p>
-
-          <a href="#productos" class="boton boton-principal"> Ver catálogo </a>
         </div>
       </section>
 
-      <!-- =====================================================
+      <!-- =========================================
          CATÁLOGO
-    ====================================================== -->
+    ========================================== -->
       <section class="seccion-productos" id="productos">
         <div class="contenedor">
           <div class="encabezado-seccion">
-            <p class="etiqueta-seccion">Catálogo EDIJA</p>
+            <p class="etiqueta-seccion">Nuestro catálogo</p>
 
-            <h2>Nuestra maquinaria</h2>
+            <h2>Productos disponibles</h2>
 
             <p>
-              Revisa nuestros equipos disponibles. Las fotografías del catálogo
-              cambian automáticamente cuando un producto tiene varias imágenes.
-              Selecciona una máquina para conocer sus características completas.
+              Selecciona un producto para conocer sus características,
+              fotografías, videos y formas de contacto.
+            </p>
+          </div>
+
+          <!-- =====================================================
+     BUSCADOR DE PRODUCTOS
+====================================================== -->
+          <div
+            class="buscador-catalogo"
+            id="catalogo-productos"
+          >
+            <div class="campo-buscador">
+              <i class="bi bi-search icono-buscador" aria-hidden="true"></i>
+
+              <input
+                type="search"
+                id="buscador-productos"
+                placeholder="Buscar maquinaria, producto o uso..."
+                autocomplete="off"
+                aria-label="Buscar productos"
+              />
+
+              <button
+                type="button"
+                id="limpiar-busqueda"
+                class="limpiar-busqueda"
+                aria-label="Limpiar búsqueda"
+                hidden
+              >
+                <i class="bi bi-x-lg" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <!-- Sugerencias -->
+            <div
+              class="sugerencias-productos"
+              id="sugerencias-productos"
+              hidden
+            ></div>
+
+            <!-- Cantidad encontrada -->
+            <p
+              class="resultado-busqueda"
+              id="resultado-busqueda"
+              aria-live="polite"
+            ></p>
+          </div>
+
+          <!-- Mensaje cuando no existen resultados -->
+          <div
+            class="sin-resultados-productos"
+            id="sin-resultados-productos"
+            hidden
+          >
+            <i class="bi bi-search" aria-hidden="true"></i>
+
+            <h3>No encontramos ese producto</h3>
+
+            <p>
+              Prueba con otra palabra como: picadora, molino, arroz, ganado,
+              bomba o mezcladora.
             </p>
           </div>
 
           <div class="grid-productos">
-            <!-- PRODUCTO 1 -->
+            <!-- =====================================
+               1. BOMBA DE AGUA
+          ====================================== -->
             <article
               class="tarjeta-producto"
               data-producto="productos/bomba-agua-2-pulgadas.html"
             >
-              <a
-                href="productos/bomba-agua-2-pulgadas.html"
-                aria-label="Ver más detalles de Bomba de agua de 2 pulgadas"
-              >
+              <a href="productos/bomba-agua-2-pulgadas.html">
                 <img
                   src="imagenes/bomba-agua-2-pulgadas/f1.png"
                   alt="Bomba de agua de 2 pulgadas"
@@ -123,24 +172,18 @@
                   <h3>Bomba de agua de 2 pulgadas</h3>
 
                   <p class="precio-index">Cargando precio...</p>
-
-                  <span class="ver-detalles">
-                    Ver más detalles
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </span>
                 </div>
               </a>
             </article>
 
-            <!-- PRODUCTO 2 -->
+            <!-- =====================================
+               2. BOMBA DE VACÍO
+          ====================================== -->
             <article
               class="tarjeta-producto"
               data-producto="productos/bomba-vacio.html"
             >
-              <a
-                href="productos/bomba-vacio.html"
-                aria-label="Ver más detalles de Bomba de vacío"
-              >
+              <a href="productos/bomba-vacio.html">
                 <img
                   src="imagenes/bomba-vacio/f1.png"
                   alt="Bomba de vacío"
@@ -151,24 +194,18 @@
                   <h3>Bomba de vacío</h3>
 
                   <p class="precio-index">Cargando precio...</p>
-
-                  <span class="ver-detalles">
-                    Ver más detalles
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </span>
                 </div>
               </a>
             </article>
 
-            <!-- PRODUCTO 3 -->
+            <!-- =====================================
+               3. BRIQUETADORA DE CARBÓN
+          ====================================== -->
             <article
               class="tarjeta-producto"
               data-producto="productos/briqueta-carbon.html"
             >
-              <a
-                href="productos/briqueta-carbon.html"
-                aria-label="Ver más detalles de Briquetadora de carbón"
-              >
+              <a href="productos/briqueta-carbon.html">
                 <img
                   src="imagenes/briqueta-carbon/f1.png"
                   alt="Briquetadora de carbón"
@@ -179,24 +216,18 @@
                   <h3>Briquetadora de carbón</h3>
 
                   <p class="precio-index">Cargando precio...</p>
-
-                  <span class="ver-detalles">
-                    Ver más detalles
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </span>
                 </div>
               </a>
             </article>
 
-            <!-- PRODUCTO 4 -->
+            <!-- =====================================
+               4. CLASIFICADORA DE GRANOS
+          ====================================== -->
             <article
               class="tarjeta-producto"
               data-producto="productos/clasificadora-granos.html"
             >
-              <a
-                href="productos/clasificadora-granos.html"
-                aria-label="Ver más detalles de Clasificadora de granos mediana"
-              >
+              <a href="productos/clasificadora-granos.html">
                 <img
                   src="imagenes/clasificadora-granos/f1.png"
                   alt="Clasificadora de granos mediana"
@@ -207,24 +238,18 @@
                   <h3>Clasificadora de granos mediana</h3>
 
                   <p class="precio-index">Cargando precio...</p>
-
-                  <span class="ver-detalles">
-                    Ver más detalles
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </span>
                 </div>
               </a>
             </article>
 
-            <!-- PRODUCTO 5 -->
+            <!-- =====================================
+               5. ELEVADOR
+          ====================================== -->
             <article
               class="tarjeta-producto"
               data-producto="productos/elevador.html"
             >
-              <a
-                href="productos/elevador.html"
-                aria-label="Ver más detalles de Elevador de material"
-              >
+              <a href="productos/elevador.html">
                 <img
                   src="imagenes/elevador/f1.png"
                   alt="Elevador de material"
@@ -235,24 +260,18 @@
                   <h3>Elevador de material</h3>
 
                   <p class="precio-index">Cargando precio...</p>
-
-                  <span class="ver-detalles">
-                    Ver más detalles
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </span>
                 </div>
               </a>
             </article>
 
-            <!-- PRODUCTO 6 -->
+            <!-- =====================================
+               6. MEZCLADORA ESPIRAL
+          ====================================== -->
             <article
               class="tarjeta-producto"
               data-producto="productos/mezclador-espiral.html"
             >
-              <a
-                href="productos/mezclador-espiral.html"
-                aria-label="Ver más detalles de Mezcladora espiral"
-              >
+              <a href="productos/mezclador-espiral.html">
                 <img
                   src="imagenes/mezclador-espiral/f1.png"
                   alt="Mezcladora espiral"
@@ -263,24 +282,18 @@
                   <h3>Mezcladora espiral</h3>
 
                   <p class="precio-index">Cargando precio...</p>
-
-                  <span class="ver-detalles">
-                    Ver más detalles
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </span>
                 </div>
               </a>
             </article>
 
-            <!-- PRODUCTO 7 -->
+            <!-- =====================================
+               7. EXTRUSORA DE BALANCEADO
+          ====================================== -->
             <article
               class="tarjeta-producto"
               data-producto="productos/mezcladora-balanceado-extrusora.html"
             >
-              <a
-                href="productos/mezcladora-balanceado-extrusora.html"
-                aria-label="Ver más detalles de Extrusora de balanceado"
-              >
+              <a href="productos/mezcladora-balanceado-extrusora.html">
                 <img
                   src="imagenes/mezcladora-balanceado-extrusora/f1.png"
                   alt="Extrusora de balanceado"
@@ -291,24 +304,18 @@
                   <h3>Extrusora de balanceado</h3>
 
                   <p class="precio-index">Cargando precio...</p>
-
-                  <span class="ver-detalles">
-                    Ver más detalles
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </span>
                 </div>
               </a>
             </article>
 
-            <!-- PRODUCTO 8 -->
+            <!-- =====================================
+               8. MEZCLADORA DE BALANCEADOS
+          ====================================== -->
             <article
               class="tarjeta-producto"
               data-producto="productos/mezcladora-balanceados.html"
             >
-              <a
-                href="productos/mezcladora-balanceados.html"
-                aria-label="Ver más detalles de Mezcladora de balanceados"
-              >
+              <a href="productos/mezcladora-balanceados.html">
                 <img
                   src="imagenes/mezcladora-balanceados/f1.png"
                   alt="Mezcladora de balanceados"
@@ -319,24 +326,18 @@
                   <h3>Mezcladora de balanceados</h3>
 
                   <p class="precio-index">Cargando precio...</p>
-
-                  <span class="ver-detalles">
-                    Ver más detalles
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </span>
                 </div>
               </a>
             </article>
 
-            <!-- PRODUCTO 9 -->
+            <!-- =====================================
+               9. MOLINO DOMÉSTICO
+          ====================================== -->
             <article
               class="tarjeta-producto"
               data-producto="productos/molino.html"
             >
-              <a
-                href="productos/molino.html"
-                aria-label="Ver más detalles de Molino doméstico"
-              >
+              <a href="productos/molino.html">
                 <img
                   src="imagenes/molino/f1.png"
                   alt="Molino doméstico"
@@ -347,24 +348,18 @@
                   <h3>Molino doméstico</h3>
 
                   <p class="precio-index">Cargando precio...</p>
-
-                  <span class="ver-detalles">
-                    Ver más detalles
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </span>
                 </div>
               </a>
             </article>
 
-            <!-- PRODUCTO 10 -->
+            <!-- =====================================
+               10. MONTACARGA
+          ====================================== -->
             <article
               class="tarjeta-producto"
               data-producto="productos/montacarga-portatil.html"
             >
-              <a
-                href="productos/montacarga-portatil.html"
-                aria-label="Ver más detalles de Montacarga portátil eléctrica"
-              >
+              <a href="productos/montacarga-portatil.html">
                 <img
                   src="imagenes/montacarga-portatil/f1.png"
                   alt="Montacarga portátil eléctrica"
@@ -374,25 +369,19 @@
                 <div class="contenido-tarjeta">
                   <h3>Montacarga portátil eléctrica</h3>
 
-                  <p class="precio-index">Cargando precio...</p>
-
-                  <span class="ver-detalles">
-                    Ver más detalles
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </span>
+                  <p class="precio-index">Consultar precio</p>
                 </div>
               </a>
             </article>
 
-            <!-- PRODUCTO 11 -->
+            <!-- =====================================
+               11. MOTOCULTOR ORUGA
+          ====================================== -->
             <article
               class="tarjeta-producto"
               data-producto="productos/motocultor-oruga-gasolina-9hp.html"
             >
-              <a
-                href="productos/motocultor-oruga-gasolina-9hp.html"
-                aria-label="Ver más detalles de Motocultor tipo oruga"
-              >
+              <a href="productos/motocultor-oruga-gasolina-9hp.html">
                 <img
                   src="imagenes/motocultor-oruga-gasolina-9hp/f1.png"
                   alt="Motocultor tipo oruga"
@@ -403,24 +392,18 @@
                   <h3>Motocultor tipo oruga</h3>
 
                   <p class="precio-index">Cargando precio...</p>
-
-                  <span class="ver-detalles">
-                    Ver más detalles
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </span>
                 </div>
               </a>
             </article>
 
-            <!-- PRODUCTO 12 -->
+            <!-- =====================================
+               12. MOTOGUADAÑA
+          ====================================== -->
             <article
               class="tarjeta-producto"
               data-producto="productos/motoguadana.html"
             >
-              <a
-                href="productos/motoguadana.html"
-                aria-label="Ver más detalles de Motoguadaña a gasolina"
-              >
+              <a href="productos/motoguadana.html">
                 <img
                   src="imagenes/motoguadana/f1.png"
                   alt="Motoguadaña a gasolina"
@@ -431,24 +414,18 @@
                   <h3>Motoguadaña a gasolina</h3>
 
                   <p class="precio-index">Cargando precio...</p>
-
-                  <span class="ver-detalles">
-                    Ver más detalles
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </span>
                 </div>
               </a>
             </article>
 
-            <!-- PRODUCTO 13 -->
+            <!-- =====================================
+               13. ORDEÑADORA 1 PUESTO
+          ====================================== -->
             <article
               class="tarjeta-producto"
               data-producto="productos/ordenadora-1-puesto.html"
             >
-              <a
-                href="productos/ordenadora-1-puesto.html"
-                aria-label="Ver más detalles de Ordeñadora de 1 puesto"
-              >
+              <a href="productos/ordenadora-1-puesto.html">
                 <img
                   src="imagenes/ordenadora-1-puesto/f1.png"
                   alt="Ordeñadora de 1 puesto"
@@ -459,24 +436,18 @@
                   <h3>Ordeñadora de 1 puesto</h3>
 
                   <p class="precio-index">Cargando precio...</p>
-
-                  <span class="ver-detalles">
-                    Ver más detalles
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </span>
                 </div>
               </a>
             </article>
 
-            <!-- PRODUCTO 14 -->
+            <!-- =====================================
+               14. ORDEÑADORA 2 PUESTOS
+          ====================================== -->
             <article
               class="tarjeta-producto"
               data-producto="productos/ordenadora-2-puesto.html"
             >
-              <a
-                href="productos/ordenadora-2-puesto.html"
-                aria-label="Ver más detalles de Ordeñadora de 2 puestos Kurtsan"
-              >
+              <a href="productos/ordenadora-2-puesto.html">
                 <img
                   src="imagenes/ordenadora-2-puesto/f1.png"
                   alt="Ordeñadora de 2 puestos Kurtsan"
@@ -487,24 +458,18 @@
                   <h3>Ordeñadora de 2 puestos Kurtsan</h3>
 
                   <p class="precio-index">Cargando precio...</p>
-
-                  <span class="ver-detalles">
-                    Ver más detalles
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </span>
                 </div>
               </a>
             </article>
 
-            <!-- PRODUCTO 15 -->
+            <!-- =====================================
+               15. PELLETILIZADORA
+          ====================================== -->
             <article
               class="tarjeta-producto"
               data-producto="productos/pelletilizadora.html"
             >
-              <a
-                href="productos/pelletilizadora.html"
-                aria-label="Ver más detalles de Pelletilizadora"
-              >
+              <a href="productos/pelletilizadora.html">
                 <img
                   src="imagenes/pelletilizadora/f1.png"
                   alt="Pelletilizadora"
@@ -515,24 +480,18 @@
                   <h3>Pelletilizadora</h3>
 
                   <p class="precio-index">Cargando precio...</p>
-
-                  <span class="ver-detalles">
-                    Ver más detalles
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </span>
                 </div>
               </a>
             </article>
 
-            <!-- PRODUCTO 16 -->
+            <!-- =====================================
+               16. PICADORA DE HIERBA
+          ====================================== -->
             <article
               class="tarjeta-producto"
               data-producto="productos/picadora-hierba.html"
             >
-              <a
-                href="productos/picadora-hierba.html"
-                aria-label="Ver más detalles de Picadora de hierba"
-              >
+              <a href="productos/picadora-hierba.html">
                 <img
                   src="imagenes/picadora-hierba/f1.png"
                   alt="Picadora de hierba"
@@ -543,24 +502,18 @@
                   <h3>Picadora de hierba</h3>
 
                   <p class="precio-index">Cargando precio...</p>
-
-                  <span class="ver-detalles">
-                    Ver más detalles
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </span>
                 </div>
               </a>
             </article>
 
-            <!-- PRODUCTO 17 -->
+            <!-- =====================================
+               17. PICADORA MIXTA
+          ====================================== -->
             <article
               class="tarjeta-producto"
               data-producto="productos/picadora-mixta.html"
             >
-              <a
-                href="productos/picadora-mixta.html"
-                aria-label="Ver más detalles de Picadora mixta"
-              >
+              <a href="productos/picadora-mixta.html">
                 <img
                   src="imagenes/picadora-mixta/f1.png"
                   alt="Picadora mixta"
@@ -571,24 +524,18 @@
                   <h3>Picadora mixta</h3>
 
                   <p class="precio-index">Cargando precio...</p>
-
-                  <span class="ver-detalles">
-                    Ver más detalles
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </span>
                 </div>
               </a>
             </article>
 
-            <!-- PRODUCTO 18 -->
+            <!-- =====================================
+               18. PICADORA 3 EN 1
+          ====================================== -->
             <article
               class="tarjeta-producto"
               data-producto="productos/picadora-3-en-1.html"
             >
-              <a
-                href="productos/picadora-3-en-1.html"
-                aria-label="Ver más detalles de Picadora 3 en 1"
-              >
+              <a href="productos/picadora-3-en-1.html">
                 <img
                   src="imagenes/picadora-3-en-1/f1.png"
                   alt="Picadora 3 en 1"
@@ -599,24 +546,18 @@
                   <h3>Picadora 3 en 1</h3>
 
                   <p class="precio-index">Cargando precio...</p>
-
-                  <span class="ver-detalles">
-                    Ver más detalles
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </span>
                 </div>
               </a>
             </article>
 
-            <!-- PRODUCTO 19 -->
+            <!-- =====================================
+               19. PICADORA DE PASTO
+          ====================================== -->
             <article
               class="tarjeta-producto"
               data-producto="productos/picadora-pasto.html"
             >
-              <a
-                href="productos/picadora-pasto.html"
-                aria-label="Ver más detalles de Picadora de pasto"
-              >
+              <a href="productos/picadora-pasto.html">
                 <img
                   src="imagenes/picadora-pasto/f1.png"
                   alt="Picadora de pasto"
@@ -627,24 +568,18 @@
                   <h3>Picadora de pasto</h3>
 
                   <p class="precio-index">Cargando precio...</p>
-
-                  <span class="ver-detalles">
-                    Ver más detalles
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </span>
                 </div>
               </a>
             </article>
 
-            <!-- PRODUCTO 20 -->
+            <!-- =====================================
+               20. PILADORA
+          ====================================== -->
             <article
               class="tarjeta-producto"
               data-producto="productos/piladora.html"
             >
-              <a
-                href="productos/piladora.html"
-                aria-label="Ver más detalles de Piladora doméstica 4 en 1"
-              >
+              <a href="productos/piladora.html">
                 <img
                   src="imagenes/piladora/f1.png"
                   alt="Piladora doméstica 4 en 1"
@@ -655,24 +590,18 @@
                   <h3>Piladora doméstica 4 en 1</h3>
 
                   <p class="precio-index">Cargando precio...</p>
-
-                  <span class="ver-detalles">
-                    Ver más detalles
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </span>
                 </div>
               </a>
             </article>
 
-            <!-- PRODUCTO 21 -->
+            <!-- =====================================
+               21. OTROS PRODUCTOS
+          ====================================== -->
             <article
               class="tarjeta-producto"
               data-producto="productos/varios.html"
             >
-              <a
-                href="productos/varios.html"
-                aria-label="Ver más detalles de Otros productos y maquinaria"
-              >
+              <a href="productos/varios.html">
                 <img
                   src="imagenes/varios/f1.png"
                   alt="Otros productos y maquinaria"
@@ -682,12 +611,7 @@
                 <div class="contenido-tarjeta">
                   <h3>Otros productos y maquinaria</h3>
 
-                  <p class="precio-index">Cargando precio...</p>
-
-                  <span class="ver-detalles">
-                    Ver más detalles
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </span>
+                  <p class="precio-index">Consultar precio</p>
                 </div>
               </a>
             </article>
@@ -695,136 +619,60 @@
         </div>
       </section>
 
-      <!-- =====================================================
-         POR QUÉ ELEGIR EDIJA
-    ====================================================== -->
-      <section class="seccion-informacion" id="nosotros">
-        <div class="contenedor">
-          <div class="encabezado-seccion">
-            <p class="etiqueta-seccion">Respaldo EDIJA</p>
-
-            <h2>Equipos pensados para trabajar y durar</h2>
-
-            <p>
-              Buscamos que cada cliente encuentre una máquina adecuada para su
-              necesidad, con acompañamiento antes y después de la compra.
-            </p>
-          </div>
-
-          <div class="lista-beneficios">
-            <article class="beneficio">
-              <span class="icono-beneficio" aria-hidden="true">
-                <i class="bi bi-shield-check"></i>
-              </span>
-
-              <h3>Materiales resistentes</h3>
-
-              <p>
-                Seleccionamos equipos construidos para soportar las exigencias
-                del trabajo agrícola, ganadero y de procesamiento.
-              </p>
-            </article>
-
-            <article class="beneficio">
-              <span class="icono-beneficio" aria-hidden="true">
-                <i class="bi bi-globe-europe-africa"></i>
-              </span>
-
-              <h3>Proveedores especializados</h3>
-
-              <p>
-                Trabajamos con proveedores e importadores de maquinaria y
-                componentes, incluyendo alternativas de procedencia europea.
-              </p>
-            </article>
-
-            <article class="beneficio">
-              <span class="icono-beneficio" aria-hidden="true">
-                <i class="bi bi-tools"></i>
-              </span>
-
-              <h3>Servicio técnico</h3>
-
-              <p>
-                Brindamos soporte técnico para ayudar a mantener los equipos en
-                buenas condiciones de funcionamiento.
-              </p>
-            </article>
-
-            <article class="beneficio">
-              <span class="icono-beneficio" aria-hidden="true">
-                <i class="bi bi-patch-check"></i>
-              </span>
-
-              <h3>Garantía</h3>
-
-              <p>
-                Nuestra maquinaria cuenta con respaldo y garantía de acuerdo con
-                las condiciones correspondientes a cada producto.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- =====================================================
+      <!-- =========================================
          CONTACTO
-    ====================================================== -->
+    ========================================== -->
       <section class="seccion-contacto" id="contacto">
         <div class="contenedor">
           <div class="encabezado-seccion">
-            <p class="etiqueta-seccion">Hablemos</p>
+            <p class="etiqueta-seccion">Contacto</p>
 
-            <h2>¿Te interesa alguno de nuestros equipos?</h2>
+            <h2>Contáctanos</h2>
 
             <p>
-              Escríbenos para consultar disponibilidad, negociar el precio y
-              recibir información sobre el producto que necesitas.
+              Consulta disponibilidad, precios y características de nuestros
+              productos.
             </p>
           </div>
 
           <div class="redes-sociales">
-            <!-- WhatsApp -->
             <a
-              href="https://wa.me/593984717112?text=Hola,%20estoy%20interesado%20en%20conocer%20los%20productos%20de%20EDIJA."
+              href="https://wa.me/593984717112"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Contactar a EDIJA por WhatsApp"
+              aria-label="WhatsApp de EDIJA"
             >
-              <i class="bi bi-whatsapp" aria-hidden="true"></i>
+              <i class="bi bi-whatsapp"></i>
               WhatsApp
             </a>
 
-            <!-- Facebook -->
             <a
-              href="#"
-              class="red-social-pendiente"
-              aria-label="Facebook de EDIJA próximamente"
-              onclick="return false;"
+              href="LINK_DE_FACEBOOK"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook de EDIJA"
             >
-              <i class="bi bi-facebook" aria-hidden="true"></i>
+              <i class="bi bi-facebook"></i>
               Facebook
             </a>
 
-            <!-- Instagram -->
             <a
-              href="#"
-              class="red-social-pendiente"
-              aria-label="Instagram de EDIJA próximamente"
-              onclick="return false;"
+              href="LINK_DE_INSTAGRAM"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram de EDIJA"
             >
-              <i class="bi bi-instagram" aria-hidden="true"></i>
+              <i class="bi bi-instagram"></i>
               Instagram
             </a>
 
-            <!-- TikTok -->
             <a
-              href="#"
-              class="red-social-pendiente"
-              aria-label="TikTok de EDIJA próximamente"
-              onclick="return false;"
+              href="LINK_DE_TIKTOK"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok de EDIJA"
             >
-              <i class="bi bi-tiktok" aria-hidden="true"></i>
+              <i class="bi bi-tiktok"></i>
               TikTok
             </a>
           </div>
@@ -832,15 +680,15 @@
       </section>
     </main>
 
-    <!-- =====================================================
+    <!-- =========================================
        PIE DE PÁGINA
-  ====================================================== -->
+  ========================================== -->
     <footer class="pie-pagina">
       <div class="contenedor contenido-pie">
         <div>
           <strong> EDIJA </strong>
 
-          <p>Maquinaria agrícola, ganadera y equipos de procesamiento.</p>
+          <p>Maquinaria agrícola para tu trabajo.</p>
         </div>
 
         <p>© <span id="anio"></span> EDIJA. Todos los derechos reservados.</p>

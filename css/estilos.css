@@ -145,10 +145,21 @@ button:focus-visible {
     top: 0;
     z-index: 1000;
 
-    background-color: rgba(255, 255, 255, 0.97);
-    border-bottom: 1px solid var(--borde);
+    background:
+        linear-gradient(
+            105deg,
+            #f8fbff 0%,
+            #e2ecf8 28%,
+            #8aaed3 58%,
+            #27598d 82%,
+            #0b3d70 100%
+        );
 
-    box-shadow: 0 3px 15px rgba(8, 38, 94, 0.08);
+    border-bottom: none;
+
+    box-shadow:
+        0 4px 18px rgba(8, 38, 94, 0.16);
+
     backdrop-filter: blur(10px);
 }
 
@@ -1565,4 +1576,283 @@ button:focus-visible {
         animation-iteration-count: 1 !important;
     }
 
+}
+
+/* =========================================================
+   BUSCADOR DEL CATÁLOGO
+========================================================= */
+
+.buscador-catalogo {
+    position: relative;
+
+    width: min(720px, 100%);
+
+    margin: 0 auto 38px;
+}
+
+
+/* Caja principal */
+
+.campo-buscador {
+    position: relative;
+
+    display: flex;
+
+    width: 100%;
+
+    align-items: center;
+
+    background-color: var(--blanco);
+
+    border: 1px solid var(--borde);
+    border-radius: 16px;
+
+    box-shadow: var(--sombra-suave);
+
+    transition:
+        border-color var(--transicion),
+        box-shadow var(--transicion);
+}
+
+
+.campo-buscador:focus-within {
+    border-color: var(--azul-principal);
+
+    box-shadow:
+        0 0 0 4px rgba(11, 61, 145, 0.08),
+        var(--sombra-suave);
+}
+
+
+/* Lupa */
+
+.icono-buscador {
+    position: absolute;
+
+    left: 19px;
+
+    color: var(--azul-principal);
+
+    font-size: 1.1rem;
+
+    pointer-events: none;
+}
+
+
+/* Campo */
+
+#buscador-productos {
+    width: 100%;
+
+    min-height: 58px;
+
+    padding:
+        14px
+        55px
+        14px
+        52px;
+
+    background-color: transparent;
+    color: var(--texto-principal);
+
+    border: none;
+    outline: none;
+
+    border-radius: 16px;
+
+    font-size: 1rem;
+}
+
+
+#buscador-productos::placeholder {
+    color: #8a94a6;
+}
+
+
+#buscador-productos::-webkit-search-cancel-button {
+    display: none;
+}
+
+
+/* Botón X */
+
+.limpiar-busqueda {
+    position: absolute;
+
+    right: 11px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--fondo-gris);
+    color: var(--texto-secundario);
+
+    border-radius: 50%;
+
+    font-size: 0.9rem;
+}
+
+
+.limpiar-busqueda:hover {
+    background-color: var(--azul-claro);
+    color: var(--azul-principal);
+}
+
+
+/* =========================================================
+   SUGERENCIAS
+========================================================= */
+
+.sugerencias-productos {
+    position: absolute;
+
+    z-index: 100;
+
+    top: calc(100% - 20px);
+    right: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    max-height: 330px;
+
+    background-color: var(--blanco);
+
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+
+    box-shadow:
+        0 18px 45px rgba(19, 45, 89, 0.17);
+}
+
+
+.sugerencia-producto {
+    display: flex;
+
+    width: 100%;
+
+    padding: 13px 17px;
+
+    align-items: center;
+
+    background-color: var(--blanco);
+    color: var(--texto-principal);
+
+    border: none;
+    border-bottom: 1px solid var(--borde);
+
+    text-align: left;
+
+    transition:
+        background-color var(--transicion),
+        color var(--transicion);
+}
+
+
+.sugerencia-producto:last-child {
+    border-bottom: none;
+}
+
+
+.sugerencia-producto:hover {
+    background-color: var(--azul-claro);
+    color: var(--azul-principal);
+}
+
+
+.sugerencia-producto strong {
+    font-size: 0.9rem;
+    font-weight: 750;
+
+    line-height: 1.35;
+}
+
+
+/* =========================================================
+   RESULTADOS
+========================================================= */
+
+.resultado-busqueda {
+    min-height: 22px;
+
+    margin-top: 10px;
+
+    color: var(--texto-secundario);
+
+    font-size: 0.82rem;
+
+    text-align: center;
+}
+
+
+.sin-resultados-productos {
+    max-width: 520px;
+
+    margin: 0 auto 35px;
+
+    padding: 32px 24px;
+
+    background-color: var(--blanco);
+
+    border: 1px solid var(--borde);
+    border-radius: var(--radio-mediano);
+
+    text-align: center;
+}
+
+
+.sin-resultados-productos i {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--azul-principal);
+
+    font-size: 2rem;
+}
+
+
+.sin-resultados-productos h3 {
+    margin-bottom: 6px;
+
+    color: var(--azul-oscuro);
+}
+
+
+.sin-resultados-productos p {
+    color: var(--texto-secundario);
+
+    font-size: 0.9rem;
+}
+
+
+/* Celular */
+
+@media (max-width: 620px) {
+
+    .buscador-catalogo {
+        margin-bottom: 30px;
+    }
+
+
+    #buscador-productos {
+        min-height: 55px;
+
+        font-size: 0.94rem;
+    }
+
+
+    #catalogo-productos {
+        scroll-margin-top: 90px;
+    }
+
+}
+
+#catalogo-productos {
+    scroll-margin-top: 105px;
 }

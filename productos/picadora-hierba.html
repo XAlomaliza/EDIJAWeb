@@ -1,119 +1,85 @@
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+    <meta
+      name="description"
+      content="Picadora de hierba EDIJA para preparación de alimento y elaboración de silo para ganado. Incluye garantía y servicio técnico."
+    />
 
-  <meta
-    name="description"
-    content="Picadora de hierba EDIJA para preparación de alimento y elaboración de silo para ganado. Incluye garantía y servicio técnico."
-  />
+    <meta name="author" content="EDIJA" />
 
-  <meta name="author" content="EDIJA" />
+    <title>Picadora de hierba | EDIJA</title>
 
-  <title>Picadora de hierba | EDIJA</title>
+    <!-- Estilos generales -->
+    <link rel="stylesheet" href="../css/estilos.css" />
 
-  <!-- Estilos generales -->
-  <link rel="stylesheet" href="../css/estilos.css" />
+    <!-- Estilos de productos -->
+    <link rel="stylesheet" href="../css/productos.css" />
 
-  <!-- Estilos de productos -->
-  <link rel="stylesheet" href="../css/productos.css" />
+    <!-- Íconos Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
 
-  <!-- Íconos Bootstrap -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-  />
-</head>
-
-
-<body>
-
-  <!-- =========================================
+  <body>
+    <!-- =========================================
        ENCABEZADO
   ========================================== -->
-  <header class="encabezado">
+    <header class="encabezado">
+      <div class="contenedor barra-navegacion">
+        <a href="../index.html" class="nombre-empresa"> EDIJA </a>
 
-    <div class="contenedor barra-navegacion">
+        <button
+          class="boton-menu"
+          id="boton-menu"
+          type="button"
+          aria-label="Abrir menú de navegación"
+          aria-controls="menu-principal"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
 
-      <a href="../index.html" class="nombre-empresa">
-        EDIJA
-      </a>
+        <nav
+          class="menu-principal"
+          id="menu-principal"
+          aria-label="Navegación principal"
+        >
+          <a href="../index.html#catalogo-productos"> Productos </a>
+          <a href="../index.html#contacto">Contáctanos</a>
+        </nav>
+      </div>
+    </header>
 
-      <button
-        class="boton-menu"
-        id="boton-menu"
-        type="button"
-        aria-label="Abrir menú de navegación"
-        aria-controls="menu-principal"
-        aria-expanded="false"
-      >
-        ☰
-      </button>
-
-      <nav
-        class="menu-principal"
-        id="menu-principal"
-        aria-label="Navegación principal"
-      >
-        <a href="../index.html">Inicio</a>
-        <a href="../index.html#productos">Productos</a>
-        <a href="../index.html#contacto">Contáctanos</a>
-      </nav>
-
-    </div>
-
-  </header>
-
-
-  <main>
-
-    <!-- =========================================
+    <main>
+      <!-- =========================================
          RUTA DE NAVEGACIÓN
     ========================================== -->
-    <section class="ruta-producto">
+      <section class="ruta-producto">
+        <div class="contenedor">
+          <nav aria-label="Ruta de navegación">
 
-      <div class="contenedor">
+            <a href="../index.html#catalogo-productos"> Productos </a>
 
-        <nav aria-label="Ruta de navegación">
+            <span aria-hidden="true">/</span>
 
-          <a href="../index.html">
-            Inicio
-          </a>
+            <strong> Picadora de hierba </strong>
+          </nav>
+        </div>
+      </section>
 
-          <span aria-hidden="true">/</span>
-
-          <a href="../index.html#productos">
-            Productos
-          </a>
-
-          <span aria-hidden="true">/</span>
-
-          <strong>
-            Picadora de hierba
-          </strong>
-
-        </nav>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================================
+      <!-- =========================================
          INFORMACIÓN PRINCIPAL
     ========================================== -->
-    <section class="detalle-producto">
-
-      <div class="contenedor detalle-producto-grid">
-
-
-        <!-- =========================================
+      <section class="detalle-producto">
+        <div class="contenedor detalle-producto-grid">
+          <!-- =========================================
              SLIDER DE IMÁGENES
 
              Actualmente se deja preparado con f1.png.
@@ -129,338 +95,197 @@
              por:
              data-total="4"
         ========================================== -->
-        <div
-          class="imagen-principal-producto slider-producto"
-          data-carpeta="picadora-hierba"
-          data-total="8"
-          data-indice="1"
-        >
-
-          <!-- Flecha izquierda -->
-          <button
-            class="slider-flecha slider-anterior"
-            type="button"
-            aria-label="Ver imagen anterior"
+          <div
+            class="imagen-principal-producto slider-producto"
+            data-carpeta="picadora-hierba"
+            data-total="8"
+            data-indice="1"
           >
-            <i
-              class="bi bi-chevron-left"
-              aria-hidden="true"
-            ></i>
-          </button>
+            <!-- Flecha izquierda -->
+            <button
+              class="slider-flecha slider-anterior"
+              type="button"
+              aria-label="Ver imagen anterior"
+            >
+              <i class="bi bi-chevron-left" aria-hidden="true"></i>
+            </button>
 
+            <!-- Imagen principal -->
+            <img
+              src="../imagenes/picadora-hierba/f1.png"
+              alt="Picadora de hierba EDIJA"
+              id="imagen-principal"
+              class="slider-imagen"
+            />
 
-          <!-- Imagen principal -->
-          <img
-            src="../imagenes/picadora-hierba/f1.png"
-            alt="Picadora de hierba EDIJA"
-            id="imagen-principal"
-            class="slider-imagen"
-          />
+            <!-- Flecha derecha -->
+            <button
+              class="slider-flecha slider-siguiente"
+              type="button"
+              aria-label="Ver imagen siguiente"
+            >
+              <i class="bi bi-chevron-right" aria-hidden="true"></i>
+            </button>
 
-
-          <!-- Flecha derecha -->
-          <button
-            class="slider-flecha slider-siguiente"
-            type="button"
-            aria-label="Ver imagen siguiente"
-          >
-            <i
-              class="bi bi-chevron-right"
-              aria-hidden="true"
-            ></i>
-          </button>
-
-
-          <!-- Contador -->
-          <span
-            class="slider-contador"
-            aria-live="polite"
-          >
-            1 / 1
-          </span>
-
-        </div>
-
-
-        <!-- =========================================
-             INFORMACIÓN DEL PRODUCTO
-        ========================================== -->
-        <div class="resumen-producto">
-
-          <p class="etiqueta-producto">
-            Preparación de alimento para ganado
-          </p>
-
-          <h1>
-            Picadora de hierba
-          </h1>
-
-          <p class="descripcion-principal-producto">
-            Máquina diseñada para picar hierba y facilitar la preparación
-            de alimento para ganado.
-          </p>
-
-          <p class="descripcion-principal-producto">
-            También es ideal para la elaboración de silo, permitiendo
-            procesar la hierba para su posterior almacenamiento
-            y alimentación de los animales.
-          </p>
-
-
-          <!-- =========================================
-               PRECIO
-          ========================================== -->
-          <p class="precio-detalle">
-            $290
-            <span>Precio negociable</span>
-          </p>
-
-
-          <!-- =========================================
-               CARACTERÍSTICAS
-          ========================================== -->
-          <div class="datos-destacados">
-
-
-            <!-- Función -->
-            <article class="dato-destacado">
-
-              <span>
-                Función principal
-              </span>
-
-              <strong>
-                Picado de hierba
-              </strong>
-
-            </article>
-
-
-            <!-- Silo -->
-            <article class="dato-destacado">
-
-              <span>
-                Aplicación
-              </span>
-
-              <strong>
-                Elaboración de silo
-              </strong>
-
-            </article>
-
-
-            <!-- Uso -->
-            <article class="dato-destacado">
-
-              <span>
-                Uso recomendado
-              </span>
-
-              <strong>
-                Preparación de alimento para ganado
-              </strong>
-
-            </article>
-
-
-            <!-- Garantía -->
-            <article class="dato-destacado">
-
-              <span>
-                Garantía
-              </span>
-
-              <strong>
-                Incluida
-              </strong>
-
-            </article>
-
-
-            <!-- Servicio técnico -->
-            <article class="dato-destacado">
-
-              <span>
-                Servicio
-              </span>
-
-              <strong>
-                Servicio técnico disponible
-              </strong>
-
-            </article>
-
+            <!-- Contador -->
+            <span class="slider-contador" aria-live="polite"> 1 / 1 </span>
           </div>
 
-
           <!-- =========================================
+             INFORMACIÓN DEL PRODUCTO
+        ========================================== -->
+          <div class="resumen-producto">
+            <p class="etiqueta-producto">Preparación de alimento para ganado</p>
+
+            <h1>Picadora de hierba</h1>
+
+            <p class="descripcion-principal-producto">
+              Máquina diseñada para picar hierba y facilitar la preparación de
+              alimento para ganado.
+            </p>
+
+            <p class="descripcion-principal-producto">
+              También es ideal para la elaboración de silo, permitiendo procesar
+              la hierba para su posterior almacenamiento y alimentación de los
+              animales.
+            </p>
+
+            <!-- =========================================
+               PRECIO
+          ========================================== -->
+            <p class="precio-detalle">
+              $290
+              <span>Precio negociable</span>
+            </p>
+
+            <!-- =========================================
+               CARACTERÍSTICAS
+          ========================================== -->
+            <div class="datos-destacados">
+              <!-- Función -->
+              <article class="dato-destacado">
+                <span> Función principal </span>
+
+                <strong> Picado de hierba </strong>
+              </article>
+
+              <!-- Silo -->
+              <article class="dato-destacado">
+                <span> Aplicación </span>
+
+                <strong> Elaboración de silo </strong>
+              </article>
+
+              <!-- Uso -->
+              <article class="dato-destacado">
+                <span> Uso recomendado </span>
+
+                <strong> Preparación de alimento para ganado </strong>
+              </article>
+
+              <!-- Garantía -->
+              <article class="dato-destacado">
+                <span> Garantía </span>
+
+                <strong> Incluida </strong>
+              </article>
+
+              <!-- Servicio técnico -->
+              <article class="dato-destacado">
+                <span> Servicio </span>
+
+                <strong> Servicio técnico disponible </strong>
+              </article>
+            </div>
+
+            <!-- =========================================
                WHATSAPP
           ========================================== -->
-          <a
-            href="https://wa.me/593984717112?text=Hola,%20estoy%20interesado%20en%20la%20picadora%20de%20hierba."
-            class="boton-whatsapp-producto"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+            <a
+              href="https://wa.me/593984717112?text=Hola,%20estoy%20interesado%20en%20la%20picadora%20de%20hierba."
+              class="boton-whatsapp-producto"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-whatsapp" aria-hidden="true"></i>
 
-            <i
-              class="bi bi-whatsapp"
-              aria-hidden="true"
-            ></i>
-
-            Consultar por WhatsApp
-
-          </a>
-
+              Consultar por WhatsApp
+            </a>
+          </div>
         </div>
+      </section>
 
-      </div>
-
-    </section>
-
-
-    <!-- =========================================
+      <!-- =========================================
          VIDEOS DEL PRODUCTO
     ========================================== -->
-    <section class="seccion-video">
+      <section class="seccion-video">
+        <div class="contenedor">
+          <div class="encabezado-seccion">
+            <p class="etiqueta-seccion">Demostración</p>
 
-      <div class="contenedor">
+            <h2>Picadora de hierba en funcionamiento</h2>
 
-        <div class="encabezado-seccion">
+            <p>
+              Observa el funcionamiento de la máquina durante el proceso de
+              picado de hierba y preparación de material para alimentación y
+              elaboración de silo.
+            </p>
+          </div>
 
-          <p class="etiqueta-seccion">
-            Demostración
-          </p>
-
-          <h2>
-            Picadora de hierba en funcionamiento
-          </h2>
-
-          <p>
-            Observa el funcionamiento de la máquina durante el
-            proceso de picado de hierba y preparación de material
-            para alimentación y elaboración de silo.
-          </p>
-
-        </div>
-
-
-        <!-- =========================================
+          <!-- =========================================
              VIDEO 1
         ========================================== -->
-        <div class="contenedor-video">
+          <div class="contenedor-video">
+            <video controls preload="metadata" playsinline>
+              <source src="../videos/1picadura-hierba.mp4" type="video/mp4" />
 
-          <video
-            controls
-            preload="metadata"
-            playsinline
-          >
+              Tu navegador no permite reproducir este video.
+            </video>
+          </div>
 
-            <source
-              src="../videos/1picadura-hierba.mp4"
-              type="video/mp4"
-            />
-
-            Tu navegador no permite reproducir este video.
-
-          </video>
-
-        </div>
-
-
-        <!-- =========================================
+          <!-- =========================================
              VIDEO 2
         ========================================== -->
-        <div
-          class="contenedor-video"
-          style="margin-top: 30px;"
-        >
+          <div class="contenedor-video" style="margin-top: 30px">
+            <video controls preload="metadata" playsinline>
+              <source src="../videos/2picadura-hierba.mp4" type="video/mp4" />
 
-          <video
-            controls
-            preload="metadata"
-            playsinline
-          >
+              Tu navegador no permite reproducir este video.
+            </video>
+          </div>
 
-            <source
-              src="../videos/2picadura-hierba.mp4"
-              type="video/mp4"
-            />
-
-            Tu navegador no permite reproducir este video.
-
-          </video>
-
-        </div>
-
-
-        <!-- =========================================
+          <!-- =========================================
              VIDEO 3
         ========================================== -->
-        <div
-          class="contenedor-video"
-          style="margin-top: 30px;"
-        >
+          <div class="contenedor-video" style="margin-top: 30px">
+            <video controls preload="metadata" playsinline>
+              <source src="../videos/3picadura-hierba.mp4" type="video/mp4" />
 
-          <video
-            controls
-            preload="metadata"
-            playsinline
-          >
-
-            <source
-              src="../videos/3picadura-hierba.mp4"
-              type="video/mp4"
-            />
-
-            Tu navegador no permite reproducir este video.
-
-          </video>
-
+              Tu navegador no permite reproducir este video.
+            </video>
+          </div>
         </div>
+      </section>
+    </main>
 
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- =========================================
+    <!-- =========================================
        PIE DE PÁGINA
   ========================================== -->
-  <footer class="pie-pagina">
+    <footer class="pie-pagina">
+      <div class="contenedor contenido-pie">
+        <div>
+          <strong> EDIJA </strong>
 
-    <div class="contenedor contenido-pie">
+          <p>Maquinaria agrícola para tu trabajo.</p>
+        </div>
 
-      <div>
-
-        <strong>
-          EDIJA
-        </strong>
-
-        <p>
-          Maquinaria agrícola para tu trabajo.
-        </p>
-
+        <p>© <span id="anio"></span> EDIJA. Todos los derechos reservados.</p>
       </div>
+    </footer>
 
-      <p>
-        © <span id="anio"></span> EDIJA.
-        Todos los derechos reservados.
-      </p>
-
-    </div>
-
-  </footer>
-
-
-  <!-- =========================================
+    <!-- =========================================
        JAVASCRIPT
   ========================================== -->
-  <script src="../js/script.js"></script>
-
-</body>
-
+    <script src="../js/script.js"></script>
+  </body>
 </html>
