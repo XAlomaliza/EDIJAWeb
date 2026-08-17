@@ -315,6 +315,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     "varios.html":
       "otros productos maquinaria pedido agricultura ganaderia fumigacion boquilla atomizador accesorios",
+
+    "ordenos-flaco.html":
+      "ordeñadora ordenadora ordeño flaco marca flaco españa espana ganado vacas leche 1 puesto 2 puestos 4 puestos 1450 rpm 1710 rpm bomba vacio",
   };
 
   /* =========================================================
