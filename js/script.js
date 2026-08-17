@@ -713,6 +713,10 @@ tarjetasConPrecio.forEach(async (tarjeta) => {
   const rutaProducto = tarjeta.dataset.producto;
   const precioIndex = tarjeta.querySelector(".precio-index");
 
+  if (precioIndex?.classList.contains("precio-manual")) {
+    return;
+  }
+
   if (!rutaProducto || !precioIndex) {
     return;
   }
