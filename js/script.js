@@ -318,6 +318,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     "ordenos-flaco.html":
       "ordeñadora ordenadora ordeño flaco marca flaco españa espana ganado vacas leche 1 puesto 2 puestos 4 puestos 1450 rpm 1710 rpm bomba vacio",
+
+    "termonebulizador-canon.html":
+      "termonebulizador termonebulizador cañon canon husky pistola fumigacion fumigación desinfeccion desinfección nebulizador niebla recipiente control ambiental",
   };
 
   /* =========================================================

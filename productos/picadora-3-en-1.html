@@ -29,8 +29,8 @@
 
   <body>
     <!-- =========================================
-       ENCABEZADO
-  ========================================== -->
+         ENCABEZADO
+    ========================================== -->
     <header class="encabezado">
       <div class="contenedor barra-navegacion">
         <a href="../index.html" class="nombre-empresa"> EDIJA </a>
@@ -59,12 +59,11 @@
 
     <main>
       <!-- =========================================
-         RUTA DE NAVEGACIÓN
-    ========================================== -->
+           RUTA DE NAVEGACIÓN
+      ========================================== -->
       <section class="ruta-producto">
         <div class="contenedor">
           <nav aria-label="Ruta de navegación">
-
             <a href="../index.html#catalogo-productos"> Productos </a>
 
             <span aria-hidden="true">/</span>
@@ -75,20 +74,13 @@
       </section>
 
       <!-- =========================================
-         INFORMACIÓN PRINCIPAL
-    ========================================== -->
+           INFORMACIÓN PRINCIPAL
+      ========================================== -->
       <section class="detalle-producto">
         <div class="contenedor detalle-producto-grid">
           <!-- =========================================
-             SLIDER DE IMÁGENES
-
-             Actualmente:
-             f1.png
-             f2.png
-
-             Si después agregas más fotos,
-             solo cambia data-total.
-        ========================================== -->
+               SLIDER DE IMÁGENES
+          ========================================== -->
           <div
             class="imagen-principal-producto slider-producto"
             data-carpeta="picadora-3-en-1"
@@ -126,10 +118,12 @@
           </div>
 
           <!-- =========================================
-             INFORMACIÓN DEL PRODUCTO
-        ========================================== -->
+               INFORMACIÓN DEL PRODUCTO
+          ========================================== -->
           <div class="resumen-producto">
-            <p class="etiqueta-producto">Equipo agrícola multifuncional</p>
+            <p class="etiqueta-producto">
+              Equipo agrícola multifuncional
+            </p>
 
             <h1>Picadora 3 en 1</h1>
 
@@ -146,16 +140,16 @@
             </p>
 
             <!-- =========================================
-               PRECIO
-          ========================================== -->
+                 PRECIO
+            ========================================== -->
             <p class="precio-detalle">
               $1,350
               <span>Precio negociable</span>
             </p>
 
             <!-- =========================================
-               CARACTERÍSTICAS
-          ========================================== -->
+                 CARACTERÍSTICAS
+            ========================================== -->
             <div class="datos-destacados">
               <!-- Función 1 -->
               <article class="dato-destacado">
@@ -217,7 +211,9 @@
               <article class="dato-destacado">
                 <span> Aplicación </span>
 
-                <strong> Agricultura y preparación de alimento animal </strong>
+                <strong>
+                  Agricultura y preparación de alimento animal
+                </strong>
               </article>
 
               <!-- Garantía -->
@@ -236,8 +232,8 @@
             </div>
 
             <!-- =========================================
-               WHATSAPP
-          ========================================== -->
+                 WHATSAPP
+            ========================================== -->
             <a
               href="https://wa.me/593984717112?text=Hola,%20estoy%20interesado%20en%20la%20picadora%203%20en%201."
               class="boton-whatsapp-producto"
@@ -251,11 +247,44 @@
           </div>
         </div>
       </section>
+
+      <!-- =========================================
+           VIDEO DEL PRODUCTO
+      ========================================== -->
+      <section class="seccion-video">
+        <div class="contenedor">
+          <div class="encabezado-seccion">
+            <p class="etiqueta-seccion">Demostración</p>
+
+            <h2>Picadora 3 en 1 en funcionamiento</h2>
+
+            <p>
+              Observa el funcionamiento de la Picadora 3 en 1 y conoce cómo
+              trabaja el equipo durante el corte, triturado y procesamiento
+              del material.
+            </p>
+          </div>
+
+          <!-- =========================================
+               VIDEO 1
+          ========================================== -->
+          <div class="contenedor-video">
+            <video controls preload="metadata" playsinline>
+              <source
+                src="../videos/1picadora-3-en-1.mp4"
+                type="video/mp4"
+              />
+
+              Tu navegador no permite reproducir este video.
+            </video>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- =========================================
-       PIE DE PÁGINA
-  ========================================== -->
+         PIE DE PÁGINA
+    ========================================== -->
     <footer class="pie-pagina">
       <div class="contenedor contenido-pie">
         <div>
@@ -264,13 +293,15 @@
           <p>Maquinaria agrícola para tu trabajo.</p>
         </div>
 
-        <p>© <span id="anio"></span> EDIJA. Todos los derechos reservados.</p>
+        <p>
+          © <span id="anio"></span> EDIJA. Todos los derechos reservados.
+        </p>
       </div>
     </footer>
 
     <!-- =========================================
-       JAVASCRIPT
-  ========================================== -->
+         JAVASCRIPT
+    ========================================== -->
     <script src="../js/script.js"></script>
   </body>
 </html>
