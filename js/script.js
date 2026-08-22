@@ -283,7 +283,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "montacarga-portatil.html":
       "montacarga portatil electrico carga levantar transportar camion camioneta",
 
-    "motocultor-oruga-gasolina-9hp.html":
+    "motocultor-oruga-gasolina.html":
       "motocultor oruga gasolina agricultura tierra suelo terreno campo",
 
     "motoguadana.html":
